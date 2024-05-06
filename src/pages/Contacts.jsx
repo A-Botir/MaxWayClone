@@ -35,7 +35,7 @@ const Contacts = () => {
             <Link to="https://t.me/maxwaymasterfood_bot">
               <div className="flex items-center gap-1">
                 <svg
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                   focusable="false"
                   aria-hidden="true"
                   viewBox="0 0 24 24"
