@@ -1,0 +1,475 @@
+{
+  "foods": {
+    "maxibox": [
+      {
+        "id": 10,
+        "title": "Maxi BOX An'anaviy",
+        "description": "Original sendvich, kartoshka fri, 0,4 l coca cola, tanlash uchun sous",
+        "price": 42000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F68352497-3ec8-45c9-94fd-2e8258ed916c&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup",
+          "quyma cola",
+          "limonli choy"
+        ]
+      },
+      {
+        "id": 11,
+        "title": "Maxi BOX Taniqli",
+        "description": "Original lavash, kartoshka fri, 0,4 l coca cola, tanlash uchun sous",
+        "price": 42000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F05323470-5019-497a-b82c-62028a52acae&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup",
+          "quyma cola",
+          "limonli choy"
+        ]
+      },
+      {
+        "id": 12,
+        "title": "Maxi BOX Retro",
+        "description": "Shaurma Original, kartoshka fri, 0,4 l coca cola , tanlash uchun sous",
+        "price": 40000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fd667c0e2-86e8-4274-92f8-4362d668b862&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup",
+          "quyma cola",
+          "limonli choy"
+        ]
+      },
+      {
+        "id": 13,
+        "title": "Max BOX German",
+        "description": "Herman Donar , kartoshka fri, 0,4 l coca cola, tanlash uchun sous",
+        "price": 40000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F6ef451bc-3911-4fd7-997c-a9cebfc6e97d&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "quyma cola",
+          "limonli choy",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup"
+        ]
+      },
+      {
+        "id": 14,
+        "title": "Maxi BOX Trend",
+        "description": "Gamburger, kartoshka fri, 0,4 l coca cola, tanlash uchun sous",
+        "price": 38000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F5657118e-9780-4e71-aa3c-ac497b83b68a&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup",
+          "quyma cola",
+          "limonli choy"
+        ]
+      },
+      {
+        "id": 15,
+        "title": "Mini BOX",
+        "description": "Longer, kartoshka fri, coca-cola 0,3, tanlovga ko'ra sous",
+        "price": 25000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F7520a764-2b5b-4f55-8b18-92be4f1fd499&w=1920&q=75",
+        "set": [
+          "kichik kartoshka-fri",
+          "coca-cola 0,3",
+          "sarimsoqli sous",
+          "pishloqli sous",
+          "ketchup"
+        ]
+      }
+    ],
+    "klab": [
+      {
+        "id": 20,
+        "title": "Klab sendvich",
+        "description": "Original sendvich, kartoshka fri, tanlash uchun sous",
+        "price": 36000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F033adb7c-0289-4f80-a0a9-05fda8e23bc5&w=1920&q=75",
+        "set": ["sarimsoqli sous", "pishloqli sous", "ketchup"]
+      },
+      {
+        "id": 21,
+        "title": "Sendvich Original",
+        "description": "Toster non, tovuq shnitseli, yangi bodring, pomidor, klab sousi, Xoxland pishloq",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F6e75db0d-01c9-47e3-b178-0a2e61cd46fb&w=1920&q=75"
+      }
+    ],
+    "lavash": [
+      {
+        "id": 30,
+        "title": "Lavash",
+        "description": "Lavash, mol go'shti-donar, pomidor, chipslar, pomidor sousi, mayonez",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F456ce560-f72a-4993-81e5-3a06ca4bf7d3&w=1920&q=75",
+        "set": ["standart", "pishloqli", "achchiq", "klassik"]
+      },
+      {
+        "id": 31,
+        "title": "Lavash mini",
+        "description": "Pita, mol go'shti-donar, pomidor, chipslar, pomidor sousi, mayonez, Xoxland pishloq",
+        "price": 25000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fdc9f9ebc-157f-4cd2-b9cc-1087eb9ded8c&w=1920&q=75",
+        "set": ["mol go'shtli", "pishloqli", "klassik"]
+      }
+    ],
+    "shaurma": [
+      {
+        "id": 40,
+        "title": "Shaurma",
+        "description": "Donor bulochka, mol go'shti-donar, yangi bodring, pomidor, pomidor sousi",
+        "price": 28000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F97cbb3cc-de5f-4adb-88c6-349caa05113e&w=1920&q=75",
+        "set": ["pishloqli", "klassik"]
+      },
+      {
+        "id": 41,
+        "title": "German Donar",
+        "description": "Non, ranch sousi, qizil karam salati, Doner go'shti, aysberg salati, yangi pomidor",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F1b1149fb-7e05-45bb-a92b-595b83c16d5a&w=1920&q=75"
+      }
+    ],
+    "panini": [
+      {
+        "id": 50,
+        "title": "Panini klassik",
+        "description": "Bulochka, mol go'shti-donar, pomidor, tuzlangan bodring, ranch sousi va aysberg salat",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F20fd750b-8b45-4b99-902c-58e12e61bd4d&w=1920&q=75",
+        "set": ["klassik"]
+      }
+    ],
+    "burger": [
+      {
+        "id": 60,
+        "title": "Gamburger",
+        "description": "Burger bulochkasi, tuzlangan bodring, pomidor, go'shtli Patti, qizil piyoz, aysberg, Burger sousi",
+        "price": 25000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F33f3c109-bbca-40a1-8d68-455a6f88b1f0&w=1920&q=75"
+      },
+      {
+        "id": 61,
+        "title": "Chizburger",
+        "description": "Burger bulochkasi, tuzlangan bodring, pomidor, go'shtli Patti, qizil piyoz, aysberg, Burger sousi, Xoxland pishlog'i",
+        "price": 28000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Ffa034d3e-a445-4068-9475-05e71706910b&w=1920&q=75"
+      },
+      {
+        "id": 62,
+        "title": "Bigburger",
+        "description": "Burger bulochkasi, tuzlangan bodring, pomidor, 2 ta go'shtli Patti, qizil piyoz, aysberg, Burger sousi, Xoxland pishloq",
+        "price": 40000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fe4015fd5-0988-47e1-bb3e-9c1b6d1a0e90&w=1920&q=75"
+      }
+    ],
+    "donar": [
+      {
+        "id": 70,
+        "title": "Donar kebab",
+        "description": "Mol go'shti donari-go'sht, makkajo'xori bilan guruch, kartoshka fri, qizil karam salati, ziravorlar sousi",
+        "price": 42000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F561cf6a1-3f19-479d-b057-04c11ee0b891&w=1920&q=75"
+      },
+      {
+        "id": 71,
+        "title": "Donar Box",
+        "description": "Mol go'shti donari-go'sht, kartoshka fri, guruch, ranch sous va pamidor",
+        "price": 37000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F0521a96c-da75-40b4-825e-31f1fb6640d3&w=1920&q=75"
+      },
+      {
+        "id": 72,
+        "title": "Non",
+        "description": "Yumshoq bulochka",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fa16f5b4d-5c74-494f-a905-67d3d2edb4d6&w=1920&q=75"
+      }
+    ],
+    "hotdog": [
+      {
+        "id": 80,
+        "title": "Hot Dog",
+        "description": "Hot-dog bulochkasi, Kanada sosiskasi, tuzlangan bodring, pomidor, Hot-dog sousi",
+        "price": 12000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fd07386d0-4d92-4406-8c47-0ec0ff3123a3&w=1920&q=75"
+      },
+      {
+        "id": 81,
+        "title": "King Dog",
+        "description": "Hot-dog bulochkasi, 2 ta kanada sosiskasi, tuzlangan bodring, pomidor, Xoxland pishloq",
+        "price": 20000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F98a353dd-4a8f-4944-b2d6-94d0808cb8ee&w=1920&q=75"
+      },
+      {
+        "id": 82,
+        "title": "Chiz dog",
+        "description": "Hot-dog bulochkasi, kanada sosiskasi, tuzlangan bodring, pomidor, Xoxland pishloq, Hot-dog sousi",
+        "price": 15000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fc52a29e0-98dc-412d-863b-25de7c4f14f8&w=1920&q=75"
+      },
+      {
+        "id": 83,
+        "title": "Longer",
+        "description": "Hot-dog bulochka,ketchup, mayonez, strips 1 dona, tuzlangan bodring 3 dona va aysberg salat bargi",
+        "price": 15000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F9d53b565-b89b-479b-b50d-f63d4b8183ef&w=1920&q=75"
+      }
+    ],
+    "gazak": [
+      {
+        "id": 90,
+        "title": "Kartoshka fri mini",
+        "price": 9000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fe302183c-5e83-4267-b6ff-ceb35c0ae15b&w=1920&q=75",
+        "set": ["standart", "mini", "katta"]
+      },
+      {
+        "id": 91,
+        "title": "Kraft packet",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F20fd750b-8b45-4b99-902c-58e12e61bd4d&w=1920&q=75"
+      },
+      {
+        "id": 92,
+        "title": "Miks BOX",
+        "description": "kartoshka fri 60 g, naggetslar 4 dona, stripslar 2 dona",
+        "price": 30000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fa35994b6-f935-4a0a-beaa-ec4d7e3a3f80&w=1920&q=75",
+        "set": ["naggets", "miks"]
+      },
+      {
+        "id": 93,
+        "title": "Stripslar",
+        "description": "Stripslar",
+        "price": 17000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F34e38634-2c04-4f43-8e7b-199f4feac105&w=1920&q=75",
+        "set": ["S(3)", "M(5)", "L(7)"]
+      },
+      {
+        "id": 94,
+        "title": "Naggets",
+        "description": "naggetslar",
+        "price": 15000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F47744188-6d4a-48f8-9038-2341cfe15437&w=1920&q=75",
+        "set": ["S 6 шт", "М 10 шт", "L 18 шт"]
+      },
+      {
+        "id": 95,
+        "title": "Po derevenski",
+        "price": 15000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F5e891d3c-4b71-4282-b9e4-ca1f8c504e3e&w=1920&q=75"
+      }
+    ],
+    "tamaddi": [
+      {
+        "id": 100,
+        "title": "Guruch",
+        "description": "Shirin makkajo'xori bilan pishirilgan lazer guruch",
+        "price": 7000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F1c55ac0a-6436-4b1d-ada7-8377b6871e53&w=1920&q=75"
+      },
+      {
+        "id": 101,
+        "title": "Salat",
+        "description": "Salat qizil karam aralashmasi",
+        "price": 7000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fefff60bd-15c2-4e6c-9f1b-2a0eea692af7&w=1920&q=75"
+      }
+    ],
+    "desert": [
+      {
+        "id": 110,
+        "title": "Tiramisu",
+        "description": "Savoyardi pechene, mascarpone, qahva",
+        "price": 22000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fdd3eb9ef-b9e6-48ac-824a-66cfd0f39913&w=1920&q=75"
+      },
+      {
+        "id": 111,
+        "title": "Qulupnayli donat",
+        "description": "",
+        "price": 16000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F49e2f3af-66e9-46de-8646-5433e5dfb9af&w=1920&q=75"
+      },
+      {
+        "id": 112,
+        "title": "Karamel donat",
+        "description": "",
+        "price": 16000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fb8b5b8f1-f169-4b8e-8c0d-4e078617bb7d&w=1920&q=75"
+      },
+      {
+        "id": 113,
+        "title": "Yo'ng'oqli donat",
+        "description": "",
+        "price": 16000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fe10a89fe-5795-4d83-85ca-9eea113dc547&w=1920&q=75"
+      },
+      {
+        "id": 114,
+        "title": "Brauni",
+        "description": "Qora shokolad, yong'oq va shokoladli pechene",
+        "price": 22000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Febf7f8ee-0181-4294-9be8-f9241e3cff08&w=1920&q=75"
+      },
+      {
+        "id": 115,
+        "title": "San-sebastian",
+        "description": "Savoyardi kukilari, mascarpone, kahva",
+        "price": 22000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F1ae33c55-cbd8-4d0a-b9a6-6a7624beca32&w=1920&q=75"
+      }
+    ],
+    "drink": [
+      {
+        "id": 120,
+        "title": "Coca Cola (quyma)",
+        "description": "",
+        "price": 7000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F91f72331-571c-45b8-9745-b2b961ed5e0d&w=1920&q=75",
+        "set": ["0,3 l", "0,4 l", "0,5 l"]
+      },
+      {
+        "id": 121,
+        "title": "Coca Cola",
+        "description": "",
+        "price": 10000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Feefc67f4-9e14-4635-a174-4c5c6483744f&w=1920&q=75",
+        "set": ["0,5 l", "1,5 l"]
+      },
+      {
+        "id": 122,
+        "title": "Fanta",
+        "description": "",
+        "price": 10000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F9ebe8f81-c8cf-44da-9f62-8f65a65f4c3a&w=1920&q=75",
+        "set": ["0,5 l"]
+      },
+      {
+        "id": 123,
+        "title": "Sharbat Dena",
+        "description": "",
+        "price": 5000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F58c745c9-cf0c-442a-a6d9-963e5aabc362&w=1920&q=75",
+        "set": ["mulfrukt", "olmali", "apelsinli", "1 l", "0,2 l"]
+      },
+      {
+        "id": 124,
+        "title": "Fuse tea",
+        "description": "",
+        "price": 10000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F4af4d45b-6a1e-4e9c-976a-7cd5348d7efc&w=1920&q=75"
+      },
+      {
+        "id": 125,
+        "title": "Bonaqua",
+        "description": "",
+        "price": 5000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F1a92d0aa-a6fa-4c8d-90e6-811c8fb9af17&w=1920&q=75"
+      },
+      {
+        "id": 126,
+        "title": "Bir martali stakan",
+        "description": "",
+        "price": 1000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fbb5aa888-f006-4d52-aac6-38949456569e&w=1920&q=75"
+      },
+      {
+        "id": 127,
+        "title": "Qora choy",
+        "description": "Qora choy (ta’bga kora shakar)",
+        "price": 5000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F3ae92eaf-c56e-4db7-9c5b-f658bc595144&w=1920&q=75"
+      },
+      {
+        "id": 128,
+        "title": "Ko'k choy",
+        "description": "Ko’k choy (ta’bga kora shakar)",
+        "price": 5000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F62b72bbe-d73a-4eb2-baf7-054f05b53464&w=1920&q=75"
+      },
+      {
+        "id": 129,
+        "title": "Limonli choy",
+        "description": "Limonli choy (ta’bga ko'rish uchun shakar)",
+        "price": 7000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F50ef85c7-5056-4842-8459-b5e4fb3ec402&w=1920&q=75"
+      },
+      {
+        "id": 130,
+        "title": "Amerikano",
+        "description": "Tabiiy donli qahva (espresso, suv)",
+        "price": 16000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F9694f4fa-3a77-4fa8-ac41-aec0afca592d&w=1920&q=75",
+        "set": ["ваниль", "карамель"]
+      },
+      {
+        "id": 131,
+        "title": "Kapuchino",
+        "description": "Tabiiy donli qahva (espresso, sut, suv)",
+        "price": 14000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F063c6ddf-77ed-4de8-b582-272239e0b3a7&w=1920&q=75",
+        "set": ["ваниль", "карамель"]
+      },
+      {
+        "id": 132,
+        "title": "Latte",
+        "description": "Tabiiy donli qahva (espresso, suv)",
+        "price": 16000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F3c6acdc6-488a-46dd-877d-14143d416851&w=1920&q=75",
+        "set": ["ваниль", "карамель"]
+      }
+    ],
+    "sous": [
+      {
+        "id": 140,
+        "title": "Ketchup",
+        "description": "",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F7602a40e-d2ee-495e-8543-1a505f97fc21&w=1920&q=75"
+      },
+      {
+        "id": 141,
+        "title": "Pishloqli sous",
+        "description": "",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F09d6df13-155c-4371-9189-87402a4c2c3f&w=1920&q=75"
+      },
+      {
+        "id": 142,
+        "title": "Sarimsoqli sous",
+        "description": "",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Ff8fd90f1-d947-491c-acdd-a7b67c3de2eb&w=1920&q=75"
+      },
+      {
+        "id": 143,
+        "title": "Xalapeno",
+        "description": "",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F6019580b-7f23-462f-befc-3fcf2e211d0c&w=1920&q=75"
+      },
+      {
+        "id": 144,
+        "title": "Shirin va nordon sous",
+        "description": "",
+        "price": 3000,
+        "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F986269d6-7f60-4424-a2dc-a6640d00fca4&w=1920&q=75"
+      }
+    ]
+  }
+}

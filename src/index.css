@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    font-family: "Inter", Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #000000;
+    line-height: 16px;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: #fefefe;
+  }
+
+  li,
+  button {
+    cursor: pointer;
+    outline: none;
+    text-align: left;
+  }
+
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+
+  h1,
+  .headtitle {
+    font-family: monospace;
+  }
+
+  input[type="radio"] {
+    accent-color: #46a358;
+    width: 16px;
+    height: 16px;
+  }
+
+  input[type="checkbox"] {
+    accent-color: #46a358;
+    width: 16px;
+    height: 16px;
+  }
+
+  *::-webkit-scrollbar {
+    width: 10px;
+    height: 6px;
+    background-color: #ecfccb;
+  }
+  *::-webkit-scrollbar-thumb {
+    background-color: #458245;
+  }
+
+  .svghover:hover {
+    fill: #51267d;
+  }
+
+  .swipper_2 {
+    height: 45px;
+  }
+
+  :root {
+    --swiper-navigation-color: black;
+    --swiper-navigation-size: 20px;
+  }
+  .swipper-container {
+    width: 90%;
+    margin: auto;
+  }
+
+  .swipper_2 {
+    height: 45px;
+    padding-left: 40px;
+  }
+
+  .swiper-slide {
+    width: fit-content;
+  }
+
+  .swipper_3 {
+    width: 90%;
+    padding-left: 40px;
+  }
+}
