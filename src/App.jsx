@@ -16,7 +16,9 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/foods");
+        const response = await axios.get(
+          "https://66392cd04253a866a2509d4c.mockapi.io/admin/base/food",
+        );
         setFoods(response.data);
       } catch (error) {
         console.error("Error fetching data:", error);
