@@ -15,6 +15,10 @@ function App() {
   const [showButton, setShowButton] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
   const [open, setOpen] = React.useState(false);
+  const [activeLogout, setActiveLogout] = useState(
+    !localStorage.getItem("activeLogin") ||
+      localStorage.getItem("activeLogin") === "none",
+  );
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);

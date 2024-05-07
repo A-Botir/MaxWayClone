@@ -1,5 +1,5 @@
-import React, { useContext } from "react";
-import { Box, Modal, Button, Fade } from "@mui/material";
+import React, { useContext, useState } from "react";
+import { Box, Modal, Fade } from "@mui/material";
 import { UseAllContext } from "../App";
 
 const style = {
@@ -13,14 +13,40 @@ const style = {
   borderRadius: "12px",
   pt: 10,
   pb: 4,
+  outline: "none",
 };
 
 const Login = () => {
-  const { setOpen, open, handleOpen, handleClose } = useContext(UseAllContext);
+  const { open, handleClose } = useContext(UseAllContext);
+
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [confirmationCode, setConfirmationCode] = useState("");
+
+  const handlePhoneNumberChange = (event) => {
+    setPhoneNumber(event.target.value);
+  };
+
+  const handleConfirmationCodeChange = (event) => {
+    setConfirmationCode(event.target.value);
+  };
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    const lastSixDigits = phoneNumber.slice(-6);
+    if (lastSixDigits === confirmationCode) {
+      localStorage.setItem("activeLogin", "authorized");
+      alert("Avtorizatsiya muvaffaqiyatli bajarildi");
+      handleClose();
+    } else {
+      alert(
+        "Tasdiqlash kodi yaroqsiz, raqamingizning oxirgi 6 ta raqamini kiriting!",
+      );
+    }
+  };
 
   return (
     <div>
-      <Button onClick={handleOpen}>Open modal</Button>
       <Modal
         keepMounted
         open={open}
@@ -42,15 +68,31 @@ const Login = () => {
                 <div className="flex w-full items-center rounded-xl border border-[#e5e9eb] px-3 py-[10px] focus:border-[black]">
                   <p className="text-[16px]">+998 </p>
                   <input
-                    type="bymber"
-                    pattern="[0-9]d{1,9}$"
+                    value={phoneNumber}
+                    onChange={handlePhoneNumberChange}
+                    type="text"
+                    pattern="[0-9]{1,9}$"
                     maxLength={9}
                     required
-                    className="w-full pb-[2px] pl-1 text-[16px] outline-none"
+                    className="w-full pl-1 text-[16px] outline-none"
                   />
                 </div>
-                <button className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95]">
-                  send_code
+                <p className="text-[16px]">confirmation_code</p>
+                <input
+                  value={confirmationCode}
+                  onChange={handleConfirmationCodeChange}
+                  type="text"
+                  pattern="[0-9]{1,9}$"
+                  maxLength={6}
+                  required
+                  className="w-full rounded-xl border border-[#e5e9eb] px-3 py-[10px] text-[16px] outline-none focus:border-[#51267d]"
+                />
+                <button
+                  className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95]"
+                  disabled={!phoneNumber || !confirmationCode}
+                  onClick={handleLogin}
+                >
+                  Confirm{" "}
                 </button>
               </div>
               <button
