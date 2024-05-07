@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 import { Select, MenuItem } from "@mui/material";
-
-import Logo from "../assets/images/Logo.png";
+import { UseAllContext } from "../App";
 
 const Header = () => {
   const location = useLocation();
   const [language, setLanguage] = useState(10);
+  const { totalPrice, count, handleOpen } = useContext(UseAllContext);
 
   const handleChange = (event) => {
     setLanguage(event.target.value);
@@ -181,10 +181,13 @@ const Header = () => {
                     </defs>
                   </svg>
                 </div>
-                <p className="">12 000 so'm</p>
+                <p className="">{totalPrice + count * 2000} so'm</p>
               </div>
             </NavLink>
-            <button className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">
+            <button
+              className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]"
+              onClick={handleOpen}
+            >
               <svg
                 width="18"
                 height="18"

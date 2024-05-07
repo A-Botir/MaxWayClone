@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { NavLink } from "react-router-dom";
 import { Navigation, Scrollbar, A11y, EffectFade } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -6,9 +6,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+import { UseAllContext } from "../App";
 
 const StickyNavbar = () => {
   const [currentSlide, setCurrentSlide] = useState(1);
+  const { totalPrice, count } = useContext(UseAllContext);
 
   const Navlink = ({ url, children }) => (
     <a href={url} rel="noopener noreferrer">
@@ -16,7 +18,7 @@ const StickyNavbar = () => {
     </a>
   );
   return (
-    <div className="shadow-nav sticky top-0 z-30 bg-[#fefefe] py-4">
+    <div className="sticky top-0 z-30 bg-[#fefefe] py-4 shadow-nav">
       <div className="container">
         <div className="flex items-center justify-center gap-4">
           <Swiper
@@ -234,7 +236,7 @@ const StickyNavbar = () => {
                     </defs>
                   </svg>
                 </div>
-                <p className="">12 000 so'm</p>
+                <p>{totalPrice + count * 2000}</p>
               </div>
             </NavLink>
             <button className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">

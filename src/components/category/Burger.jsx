@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { UseAllContext } from "../../App";
 
 const Burger = () => {
-  const { foods, addToCart, increaseToCart, decreaseCount, count, showButton } =
+  const { foods, addToCart, updateCount, showButton } =
     useContext(UseAllContext);
 
   return (
@@ -29,7 +29,7 @@ const Burger = () => {
                 <div className="flex items-center justify-between">
                   <p>
                     <span className="text-[18px] font-bold">{food.price}</span>
-                    &nbsp; &nbsp; so'mdan  
+                    &nbsp; &nbsp; so'mdan
                   </p>
                   {showButton ? (
                     <button
@@ -39,24 +39,23 @@ const Burger = () => {
                       Qo'shish
                     </button>
                   ) : (
-                    <></>
-                    // <div className="flex items-center rounded-[20px] border border-[#51267d] py-[6px]">
-                    //   <button
-                    //     className="px-4 text-[20px] font-medium"
-                    //     onClick={decreaseCount}
-                    //   >
-                    //     -
-                    //   </button>
-                    //   <p className="w-7 text-center text-[16px] font-semibold leading-[20px]">
-                    //     {count}
-                    //   </p>
-                    //   <button
-                    //     className="px-4 text-[20px] font-medium"
-                    //     onClick={increaseToCart}
-                    //   >
-                    //     +
-                    //   </button>
-                    // </div>
+                    <div className="flex items-center rounded-[20px] border border-[#51267d] py-[6px]">
+                      <button
+                        className="px-4 text-[20px] font-medium"
+                        onClick={() => updateCount(index, item.counts - 1)}
+                      >
+                        -
+                      </button>
+                      <p className=" w-7 text-center text-[16px] font-semibold leading-[20px]">
+                        {item.counts}
+                      </p>
+                      <button
+                        className="px-4 text-[20px] font-medium"
+                        onClick={() => updateCount(index, item.counts + 1)}
+                      >
+                        +
+                      </button>
+                    </div>
                   )}
                 </div>
               </div>

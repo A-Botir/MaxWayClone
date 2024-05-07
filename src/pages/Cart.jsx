@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { UseAllContext } from "../App";
 
 const Cart = () => {
-  const { mapCart, count, updateCount, setCount } = useContext(UseAllContext);
+  const { mapCart, count, updateCount, setCount, totalPrice } =
+    useContext(UseAllContext);
 
   const increment = () => {
     setCount(count + 1);
@@ -102,7 +103,9 @@ const Cart = () => {
             <h4 className="text-[20px] font-bold leading-6">Umumiy</h4>
             <div className="my-4 flex items-center justify-between">
               <p className="text-[16px] leading-5">Mahsulotlar</p>
-              <p className="text-[16px] font-medium leading-5">79 000 so'm</p>
+              <p className="text-[16px] font-medium leading-5">
+                {totalPrice + count * 2000} so'm
+              </p>
             </div>
             <div className="mb-4 flex items-center justify-between">
               <p className="text-[16px] leading-5">Yetkazib berish</p>
@@ -111,7 +114,9 @@ const Cart = () => {
             <div className="border-t border-[#eaeaea]">
               <div className="my-4 flex items-center justify-between">
                 <p className="text-[16px] leading-5">To'lash uchun</p>
-                <p className="text-[16px] font-medium leading-5">79 000 so'm</p>
+                <p className="text-[16px] font-medium leading-5">
+                  {totalPrice + count * 2000} so'm
+                </p>
               </div>
               <button className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95]">
                 To'lov sahifasiga o'tish
