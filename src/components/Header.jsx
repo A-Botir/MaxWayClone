@@ -6,12 +6,13 @@ import { UseAllContext } from "../App";
 const Header = () => {
   const location = useLocation();
   const [language, setLanguage] = useState(10);
-  const { totalPrice, count, handleOpen } = useContext(UseAllContext);
-
+  const { totalPrice, count, handleOpen, setOpnmod } =
+    useContext(UseAllContext);
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
 
+  const openMod = () => setOpnmod(true);
   const renderValue = (selected) => {
     const languages = [
       {
@@ -104,7 +105,7 @@ const Header = () => {
           </nav>
         </div>
         <div className="flex items-center gap-8">
-          <button className="flex items-center gap-2">
+          <button className="flex items-center gap-2" onClick={openMod}>
             <div className="flex h-9 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">
               <svg
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06"

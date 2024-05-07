@@ -48,7 +48,7 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-4">
             <TargetLink url={"https://www.instagram.com/maxwayuz/"}>
               <svg
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -63,7 +63,7 @@ const Footer = () => {
             </TargetLink>
             <TargetLink url={"https://www.facebook.com/maxway.uzb/"}>
               <svg
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
@@ -78,7 +78,7 @@ const Footer = () => {
             </TargetLink>
             <TargetLink url={"https://www.youtube.com/@maxway2010"}>
               <svg
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"

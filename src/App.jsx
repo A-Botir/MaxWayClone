@@ -5,6 +5,7 @@ import { Home, About, Cart, Contacts, Branches, PageNotFound } from "./pages";
 import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import Login from "./components/Login";
+import Delivery from "./components/Delivery";
 
 export const UseAllContext = createContext();
 
@@ -15,6 +16,7 @@ function App() {
   const [showButton, setShowButton] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
   const [open, setOpen] = React.useState(false);
+  const [opnmod, setOpnmod] = React.useState(false);
   const [activeLogin, setActiveLogin] = useState(
     !localStorage.getItem("activeLogin") ||
       localStorage.getItem("activeLogin") === "none",
@@ -131,11 +133,14 @@ function App() {
           open,
           handleOpen,
           handleClose,
+          opnmod,
+          setOpnmod,
         }}
       >
         <Header />
         <div className="container">
           <Login />
+          <Delivery />
         </div>
         <Routes>
           <Route path="/" element={<Home />} />
