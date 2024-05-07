@@ -88,7 +88,7 @@ const Login = () => {
                   className="w-full rounded-xl border border-[#e5e9eb] px-3 py-[10px] text-[16px] outline-none focus:border-[#51267d]"
                 />
                 <button
-                  className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95]"
+                  className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] disabled:bg-[#dde2e4] disabled:text-[#808080]"
                   disabled={!phoneNumber || !confirmationCode}
                   onClick={handleLogin}
                 >

@@ -1,9 +1,32 @@
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import { UseAllContext } from "../App";
 
 const Cart = () => {
-  const { mapCart, count, updateCount, setCount, totalPrice } =
-    useContext(UseAllContext);
+  const {
+    mapCart,
+    count,
+    updateCount,
+    setCount,
+    totalPrice,
+    handleOpen,
+    setmapCart,
+  } = useContext(UseAllContext);
+  const [isPaymentDisabled, setIsPaymentDisabled] = useState(true);
+
+  useEffect(() => {
+    setIsPaymentDisabled(totalPrice <= 40000);
+  }, [totalPrice]);
+
+  const handlePayment = () => {
+    const activeLogin = localStorage.getItem("activeLogin");
+    if (activeLogin && activeLogin.trim() === "authorized") {
+      alert("Buyurtma qabul qilinadi! Yetkazib berishni kuting");
+      localStorage.setItem("cartStorage", JSON.stringify([]));
+      setmapCart([]);
+    } else {
+      handleOpen();
+    }
+  };
 
   const increment = () => {
     setCount(count + 1);
@@ -118,9 +141,18 @@ const Cart = () => {
                   {totalPrice + count * 2000} so'm
                 </p>
               </div>
-              <button className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95]">
+              <button
+                className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] disabled:bg-[#dde2e4] disabled:text-[#808080]"
+                disabled={isPaymentDisabled}
+                onClick={handlePayment}
+              >
                 To'lov sahifasiga o'tish
               </button>
+              <p className="mt-1 text-center text-[12px] text-red-500">
+                {isPaymentDisabled === true
+                  ? "Eng kam buyurtma narxi 40 000 so'm bo'lishi kerak"
+                  : ""}
+              </p>
             </div>
           </div>
         </div>

@@ -15,7 +15,7 @@ function App() {
   const [showButton, setShowButton] = useState(true);
   const [totalPrice, setTotalPrice] = useState(0);
   const [open, setOpen] = React.useState(false);
-  const [activeLogout, setActiveLogout] = useState(
+  const [activeLogin, setActiveLogin] = useState(
     !localStorage.getItem("activeLogin") ||
       localStorage.getItem("activeLogin") === "none",
   );
@@ -124,6 +124,7 @@ function App() {
           count,
           showButton,
           mapCart,
+          setmapCart,
           updateCount,
           setCount,
           totalPrice,
