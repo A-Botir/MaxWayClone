@@ -1,5 +1,5 @@
 import React, { useContext, useState } from "react";
-import { Box, Modal, Fade } from "@mui/material";
+import { Box, Modal, Fade, IconButton } from "@mui/material";
 import { UseAllContext } from "../App";
 import { YMaps, Map, SearchControl } from "@pbe/react-yandex-maps";
 import Adress from "./Adress";
@@ -10,7 +10,7 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: "75%",
+  width: "70%",
   bgcolor: "background.paper",
   boxShadow: "rgb(0 0 0 / 20%) 0px 11px 15px -7px",
   borderRadius: "16px",
@@ -45,18 +45,24 @@ const Delivery = () => {
       >
         <Fade in={opnmod}>
           <Box sx={style}>
-            <div className="relative px-6 pt-7 sm:static sm:p-0 md:static md:p-0">
-              <div className="grid w-full grid-cols-2 gap-3  sm:flex sm:flex-col-reverse sm:overflow-auto md:flex md:flex-col-reverse md:overflow-auto">
+            <div className="relative px-6 pt-6 sm:static sm:p-0 md:static md:p-0">
+              <h2 className="mb-2 text-[24px] font-bold leading-6 sm:hidden md:hidden">
+                Qabul qilib olish turini tanlang
+              </h2>
+              <p className="mb-4 leading-6 text-[#808080] sm:hidden md:hidden">
+                Real vaqt va joylashuvga mos menyuni ko'rish uchun
+              </p>
+              <div className="grid w-full grid-cols-2 gap-4  sm:flex sm:flex-col-reverse sm:overflow-auto md:flex md:flex-col-reverse md:overflow-auto">
                 <div className="col-span-1 sm:relative sm:w-full sm:px-3 sm:pt-9 md:relative md:w-full md:px-4 md:pt-10">
-                  <h2 className="mb:mb-1 mb-2 text-[24px] font-bold leading-6 sm:mb-1 sm:text-[20px] sm:font-semibold md:text-[20px] md:font-semibold">
+                  <h2 className="mb:block mb:mb-1 mb-2 hidden text-[24px] font-bold leading-6 sm:mb-1 sm:block sm:text-[20px] sm:font-semibold md:text-[20px] md:font-semibold">
                     Qabul qilib olish turini tanlang
                   </h2>
-                  <p className="mb-4 leading-6 text-[#808080] sm:leading-4 md:leading-4">
+                  <p className="mb:block mb-4 hidden leading-6 text-[#808080] sm:block sm:leading-4 md:leading-4">
                     Real vaqt va joylashuvga mos menyuni ko'rish uchun
                   </p>
                   <div className="mb-5 flex items-center gap-3 sm:mb-4 md:mb-4">
                     <button
-                      className={`flex-grow transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 1 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
+                      className={`w-[50%] transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 1 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
                       onClick={() => {
                         setDeliver(1);
                       }}
@@ -64,7 +70,7 @@ const Delivery = () => {
                       Yetkazib berish
                     </button>
                     <button
-                      className={`flex-grow transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 2 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
+                      className={`w-[50%] transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 2 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
                       onClick={() => {
                         setDeliver(2);
                       }}
@@ -80,24 +86,25 @@ const Delivery = () => {
                   >
                     Belgilash
                   </button>
-                  <button
-                    className="absolute right-2 top-2 z-20 sm:right-1 sm:top-1 md:right-1 md:top-1"
-                    onClick={(e) => {
-                      e.preventDefault(), closeMod();
-                    }}
-                  >
-                    <svg
-                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
-                      focusable="false"
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                      width={24}
-                      height={24}
-                      data-testid="CloseIcon"
+                  <span className="absolute right-1 top-1 z-20 sm:right-1 sm:top-1 md:right-1 md:top-1">
+                    <IconButton
+                      onClick={(e) => {
+                        e.preventDefault(), closeMod();
+                      }}
                     >
-                      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                    </svg>
-                  </button>
+                      <svg
+                        className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                        focusable="false"
+                        aria-hidden="true"
+                        viewBox="0 0 24 24"
+                        width={24}
+                        height={24}
+                        data-testid="CloseIcon"
+                      >
+                        <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                      </svg>
+                    </IconButton>
+                  </span>
                 </div>
                 <div className="col-span-1 overflow-hidden rounded-xl sm:h-[45vh] sm:w-full sm:rounded-none md:h-[60vh] md:w-full md:rounded-none">
                   {deliver === 1 && (

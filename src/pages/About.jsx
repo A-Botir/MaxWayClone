@@ -4,7 +4,7 @@ const About = () => {
   return (
     <div className="container">
       <section className="py-8 sm:py-6 md:py-7">
-        <h2 className="mb:leading-8 mb-6 text-[32px] font-semibold leading-10 sm:mb-4 sm:text-[24px] sm:leading-8 md:mb-4 md:text-[24px]">
+        <h2 className="mb-6 text-[32px] font-semibold leading-10 sm:mb-4 sm:text-[24px] sm:leading-8 md:mb-4 md:text-[24px] md:leading-8">
           Kompaniya haqida
         </h2>
         <div className="mb-8 max-h-[300px] w-full overflow-hidden rounded-xl sm:mb-6 sm:max-h-[165px] md:mb-6 md:max-h-[165px]">

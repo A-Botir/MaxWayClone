@@ -4,14 +4,22 @@ export default {
   theme: {
     extend: {
       container: {
+        maxWidth: {
+          sm: "99%",
+          md: "96%",
+          lg: "93%",
+          xl: "90%",
+        },
+
         padding: {
           DEFAULT: "1rem",
-          sm: "1rem",
-          md: "2rem",
+          sm: "0rem",
+          md: "1rem",
           lg: "2rem",
           xl: "3rem",
         },
         center: true,
+        margin: 0,
       },
       transitionTimingFunction: {
         easy: "ease",

@@ -39,7 +39,7 @@ const Cart = () => {
   };
 
   return (
-    <section className="container mt-8 sm:mt-6 md:mt-6">
+    <section className="container mt-8 sm:mt-6  md:mt-6 md:min-h-[65vh]">
       <h2 className="mb-8 text-[32px] font-bold leading-10 sm:mb-5 md:mb-6">
         Savatcha
       </h2>

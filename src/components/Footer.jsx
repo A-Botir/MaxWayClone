@@ -60,12 +60,11 @@ const Footer = () => {
           <div className="flex items-center justify-center gap-4">
             <TargetLink url={"https://www.instagram.com/maxwayuz/"}>
               <svg
-                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="svghover selection:MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
                 data-testid="InstagramIcon"
-                className="svghover"
                 fill="#808080"
                 width={24}
                 height={24}
@@ -75,12 +74,11 @@ const Footer = () => {
             </TargetLink>
             <TargetLink url={"https://www.facebook.com/maxway.uzb/"}>
               <svg
-                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="svghover MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
                 data-testid="FacebookOutlinedIcon"
-                className="svghover"
                 fill="#808080"
                 width={24}
                 height={24}
@@ -90,12 +88,11 @@ const Footer = () => {
             </TargetLink>
             <TargetLink url={"https://www.youtube.com/@maxway2010"}>
               <svg
-                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv svghover"
                 focusable="false"
                 aria-hidden="true"
                 viewBox="0 0 24 24"
                 data-testid="YouTubeIcon"
-                className="svghover"
                 fill="#808080"
                 width={24}
                 height={24}
