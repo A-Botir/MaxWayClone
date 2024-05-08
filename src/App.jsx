@@ -6,6 +6,7 @@ import React, { createContext, useEffect, useState } from "react";
 import axios from "axios";
 import Login from "./components/Login";
 import Delivery from "./components/Delivery";
+import Menu from "./components/Menu";
 
 export const UseAllContext = createContext();
 
@@ -17,6 +18,7 @@ function App() {
   const [totalPrice, setTotalPrice] = useState(0);
   const [open, setOpen] = React.useState(false);
   const [opnmod, setOpnmod] = React.useState(false);
+  const [opnmenu, setOpnmenu] = React.useState(false);
   const [activeLogin, setActiveLogin] = useState(
     !localStorage.getItem("activeLogin") ||
       localStorage.getItem("activeLogin") === "none",
@@ -117,6 +119,10 @@ function App() {
     setTotalPrice(calculateTotalPrice());
   }, [localStorage.getItem("cartStorage")]);
 
+  const toggleDrawer = (newOpen) => () => {
+    setOpnmenu(newOpen);
+  };
+
   return (
     <div className="w-full">
       <UseAllContext.Provider
@@ -135,12 +141,16 @@ function App() {
           handleClose,
           opnmod,
           setOpnmod,
+          opnmenu,
+          setOpnmenu,
+          toggleDrawer,
         }}
       >
         <Header />
         <div className="container">
           <Login />
           <Delivery />
+          <Menu />
         </div>
         <Routes>
           <Route path="/" element={<Home />} />

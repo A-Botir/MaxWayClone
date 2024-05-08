@@ -17,7 +17,7 @@ import Hero2 from "../assets/images/hero_img2.svg";
 
 const Hero = () => {
   return (
-    <div className="mt-5">
+    <div className="mt-5 sm:mt-1 md:mt-1">
       <Swiper
         modules={[Navigation, Scrollbar, A11y, Autoplay, EffectFade]}
         spaceBetween={50}
@@ -31,7 +31,7 @@ const Hero = () => {
               <img
                 src={Hero1}
                 alt="img"
-                className="box-border w-full rounded-[40px] object-cover"
+                className="box-border w-full rounded-[40px] object-cover sm:rounded-[20px] md:rounded-[28px]"
               />
             </div>
           </div>
@@ -42,7 +42,7 @@ const Hero = () => {
               <img
                 src={Hero2}
                 alt="img"
-                className="box-border w-full rounded-[40px] object-cover"
+                className="box-border w-full rounded-[40px] object-cover sm:rounded-[20px] md:rounded-[28px]"
               />
             </div>
           </div>

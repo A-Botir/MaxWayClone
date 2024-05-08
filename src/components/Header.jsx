@@ -1,18 +1,19 @@
 import React, { useState, useContext } from "react";
 import { NavLink, useLocation } from "react-router-dom";
-import { Select, MenuItem } from "@mui/material";
+import { Select, MenuItem, IconButton } from "@mui/material";
 import { UseAllContext } from "../App";
 
 const Header = () => {
   const location = useLocation();
   const [language, setLanguage] = useState(10);
-  const { totalPrice, count, handleOpen, setOpnmod } =
+  const { totalPrice, count, handleOpen, setOpnmod, toggleDrawer } =
     useContext(UseAllContext);
+
   const handleChange = (event) => {
     setLanguage(event.target.value);
   };
-
   const openMod = () => setOpnmod(true);
+
   const renderValue = (selected) => {
     const languages = [
       {
@@ -43,19 +44,33 @@ const Header = () => {
     >
       <header className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-10 sm:gap-1 md:gap-1">
-          <button className="hidden h-10 w-10 items-center justify-center rounded-xl hover:bg-[] sm:flex md:flex">
-            <svg
-              className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
-              focusable="false"
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              data-testid="MenuIcon"
+          <span className="hidden sm:block md:block">
+            <IconButton
+              color="inherit"
+              onClick={toggleDrawer(true)}
+              sx={{
+                "&:hover": {
+                  backgroundColor: "#f1eff4",
+                },
+                borderRadius: "12px",
+                padding: "8px",
+              }}
             >
-              <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
-            </svg>
-          </button>
+              <svg
+                className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv hover:fill-[#51267d]"
+                focusable="false"
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                data-testid="MenuIcon"
+                width={24}
+                height={24}
+              >
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"></path>
+              </svg>
+            </IconButton>
+          </span>
           <NavLink to="/">
-            <div className="max-h-13 max-w-13  sm:max-w-[38px]  md:max-h-[38px]">
+            <div className="max-h-13 max-w-13  sm:max-w-[38px]  md:max-w-[38px]">
               <img
                 src="https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fcfff938f-a7f6-4694-972e-c7fa9c0f68ba&w=48&q=75"
                 alt="site logo"
@@ -105,7 +120,10 @@ const Header = () => {
           </nav>
         </div>
         <div className="flex items-center gap-8">
-          <button className="flex items-center gap-2" onClick={openMod}>
+          <button
+            className="flex items-center gap-2 sm:hidden md:hidden"
+            onClick={openMod}
+          >
             <div className="flex h-9 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">
               <svg
                 className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06"
@@ -127,38 +145,40 @@ const Header = () => {
               </p>
             </div>
           </button>
-          <div className="flex items-center gap-3 sm:hidden md:hidden">
-            <Select
-              labelId="demo-simple-select-autowidth-label"
-              id="demo-simple-select-autowidth"
-              value={language}
-              onChange={handleChange}
-              autoWidth
-              renderValue={renderValue}
-              sx={{
-                backgroundColor: "#f1eff4",
-                outline: "none",
-              }}
-            >
-              <MenuItem value={10}>
-                <div className="flex space-x-2">
-                  <img src="https://maxway.uz/images/uz.svg" alt="uzb" />
-                  <p>O'zbekcha</p>
-                </div>
-              </MenuItem>
-              <MenuItem value={21}>
-                <div className="flex space-x-2">
-                  <img src="https://maxway.uz/images/ru.svg" alt="rus" />
-                  <p>Русский</p>
-                </div>
-              </MenuItem>
-              <MenuItem value={22}>
-                <div className="flex space-x-2">
-                  <img src="https://maxway.uz/images/en.svg" alt="eng" />
-                  <p>English</p>
-                </div>
-              </MenuItem>
-            </Select>
+          <div className="flex items-center gap-3">
+            <div className="sm:hidden md:hidden">
+              <Select
+                labelId="demo-simple-select-autowidth-label"
+                id="demo-simple-select-autowidth"
+                value={language}
+                onChange={handleChange}
+                autoWidth
+                renderValue={renderValue}
+                sx={{
+                  backgroundColor: "#f1eff4",
+                  outline: "none",
+                }}
+              >
+                <MenuItem value={10}>
+                  <div className="flex space-x-2">
+                    <img src="https://maxway.uz/images/uz.svg" alt="uzb" />
+                    <p>O'zbekcha</p>
+                  </div>
+                </MenuItem>
+                <MenuItem value={21}>
+                  <div className="flex space-x-2">
+                    <img src="https://maxway.uz/images/ru.svg" alt="rus" />
+                    <p>Русский</p>
+                  </div>
+                </MenuItem>
+                <MenuItem value={22}>
+                  <div className="flex space-x-2">
+                    <img src="https://maxway.uz/images/en.svg" alt="eng" />
+                    <p>English</p>
+                  </div>
+                </MenuItem>
+              </Select>
+            </div>
             <NavLink to="/cart">
               <div className="flex items-center justify-center gap-2">
                 <div className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">
@@ -186,7 +206,7 @@ const Header = () => {
               </div>
             </NavLink>
             <button
-              className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]"
+              className="flex h-8 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4] sm:hidden md:hidden"
               onClick={handleOpen}
             >
               <svg
