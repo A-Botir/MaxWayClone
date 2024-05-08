@@ -14,9 +14,14 @@ const style = {
   bgcolor: "background.paper",
   boxShadow: "rgb(0 0 0 / 20%) 0px 11px 15px -7px",
   borderRadius: "16px",
-  py: "30px",
-  px: "25px",
+  pb: "30px",
   outline: "none",
+  "@media screen and (max-width: 1024px)": {
+    width: "100%",
+    maxHeight: "100vh",
+    pb: "16px",
+    borderRadius: "none",
+  },
 };
 
 const Delivery = () => {
@@ -40,16 +45,16 @@ const Delivery = () => {
       >
         <Fade in={opnmod}>
           <Box sx={style}>
-            <div className="relaive">
-              <h2 className="mb-2 text-[24px] font-bold leading-[24px]">
-                Qabul qilib olish turini tanlang
-              </h2>
-              <p className="mb-4  leading-6 text-[#808080]">
-                Real vaqt va joylashuvga mos menyuni ko'rish uchun
-              </p>
-              <div className="grid w-full grid-cols-2 gap-3 sm:grid-cols-1 md:grid-cols-1">
-                <div className="col-span-1 sm:col-start-2 md:col-start-2">
-                  <div className="mb-5 flex items-center gap-3 ">
+            <div className="relative px-6 pt-7 sm:static sm:p-0 md:static md:p-0">
+              <div className="grid w-full grid-cols-2 gap-3  sm:flex sm:flex-col-reverse sm:overflow-auto md:flex md:flex-col-reverse md:overflow-auto">
+                <div className="col-span-1 sm:relative sm:w-full sm:px-3 sm:pt-9 md:relative md:w-full md:px-4 md:pt-10">
+                  <h2 className="mb:mb-1 mb-2 text-[24px] font-bold leading-6 sm:mb-1 sm:text-[20px] sm:font-semibold md:text-[20px] md:font-semibold">
+                    Qabul qilib olish turini tanlang
+                  </h2>
+                  <p className="mb-4 leading-6 text-[#808080] sm:leading-4 md:leading-4">
+                    Real vaqt va joylashuvga mos menyuni ko'rish uchun
+                  </p>
+                  <div className="mb-5 flex items-center gap-3 sm:mb-4 md:mb-4">
                     <button
                       className={`flex-grow transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 1 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
                       onClick={() => {
@@ -75,8 +80,26 @@ const Delivery = () => {
                   >
                     Belgilash
                   </button>
+                  <button
+                    className="absolute right-2 top-2 z-20 sm:right-1 sm:top-1 md:right-1 md:top-1"
+                    onClick={(e) => {
+                      e.preventDefault(), closeMod();
+                    }}
+                  >
+                    <svg
+                      className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
+                      focusable="false"
+                      aria-hidden="true"
+                      viewBox="0 0 24 24"
+                      width={24}
+                      height={24}
+                      data-testid="CloseIcon"
+                    >
+                      <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
+                    </svg>
+                  </button>
                 </div>
-                <div className="col-span-1 overflow-hidden rounded-xl sm:col-start-1 md:col-start-1">
+                <div className="col-span-1 overflow-hidden rounded-xl sm:h-[45vh] sm:w-full sm:rounded-none md:h-[60vh] md:w-full md:rounded-none">
                   {deliver === 1 && (
                     <YMaps>
                       <Map
@@ -102,24 +125,6 @@ const Delivery = () => {
                   )}
                 </div>
               </div>
-              <button
-                className="absolute right-2 top-4 z-20"
-                onClick={(e) => {
-                  e.preventDefault(), closeMod();
-                }}
-              >
-                <svg
-                  className="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv"
-                  focusable="false"
-                  aria-hidden="true"
-                  viewBox="0 0 24 24"
-                  width={24}
-                  height={24}
-                  data-testid="CloseIcon"
-                >
-                  <path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path>
-                </svg>
-              </button>
             </div>
           </Box>
         </Fade>

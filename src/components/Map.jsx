@@ -11,8 +11,8 @@ const Map = () => {
 
   return (
     <section className="mb-20 mt-10">
-      <div className="max-h-[700px] w-full">
-        <div className="h-full w-full">
+      <div className="max-h-[700px] w-full ">
+        <div className="h-full w-full overflow-auto rounded-xl">
           {mapLoaded && (
             <iframe
               src="https://yandex.ru/map-widget/v1/?um=constructor%3A7ac1c80756e7fc35c8536dca83504c5a0b183565c021c48c15f5b8286b3267d6&amp;source=constructor"

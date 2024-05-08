@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Contacts = () => {
   return (
     <div className="container">
-      <section className="py-8">
+      <section className="py-8 sm:min-h-[52vh] md:min-h-[65vh]">
         <h2 className="mb-8 text-[32px] font-semibold leading-10 sm:mb-6 sm:text-[24px] sm:leading-8 md:mb-6 md:text-[24px] md:leading-8">
           Bog'lanish
         </h2>

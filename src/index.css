@@ -62,10 +62,10 @@
   *::-webkit-scrollbar {
     width: 10px;
     height: 6px;
-    background-color: #ecfccb;
+    background-color: #c7a2ec;
   }
   *::-webkit-scrollbar-thumb {
-    background-color: #458245;
+    background-color: #51267d;
   }
 
   .svghover:hover {
