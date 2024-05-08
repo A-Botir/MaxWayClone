@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 const About = () => {
   return (
     <div className="container">
-      <section className="py-8">
-        <h2 className="mb-6 text-[32px] font-semibold leading-10">
+      <section className="py-8 sm:py-6 md:py-7">
+        <h2 className="mb:leading-8 mb-6 text-[32px] font-semibold leading-10 sm:mb-4 sm:text-[24px] sm:leading-8 md:mb-4 md:text-[24px]">
           Kompaniya haqida
         </h2>
-        <div className="mb-8 max-h-[300px] w-full overflow-hidden rounded-xl">
+        <div className="mb-8 max-h-[300px] w-full overflow-hidden rounded-xl sm:mb-6 sm:max-h-[165px] md:mb-6 md:max-h-[165px]">
           <img
             src="https://maxway.uz/_next/image?url=%2Fimages%2Fabout.png&w=1920&q=75"
             alt="max way img"

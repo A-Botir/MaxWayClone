@@ -5,12 +5,12 @@ const Contacts = () => {
   return (
     <div className="container">
       <section className="py-8">
-        <h2 className="mb-8 text-[32px] font-semibold leading-10">
+        <h2 className="mb-8 text-[32px] font-semibold leading-10 sm:mb-6 sm:text-[24px] sm:leading-8 md:mb-6 md:text-[24px] md:leading-8">
           Bog'lanish
         </h2>
-        <div className="grid grid-cols-4 gap-6">
-          <div className="col-span-1 rounded-xl bg-[#96b1c2] py-8 pl-8 pr-3">
-            <div className="h-[100px] w-[100px] rounded-[10px] bg-white p-2">
+        <div className="grid grid-cols-4 gap-6 sm:grid-cols-1 md:grid-cols-1">
+          <div className="col-span-1 rounded-xl bg-[#96b1c2] py-8 pl-8 pr-3 sm:p-4 md:p-4">
+            <div className="h-[100px] w-[100px] rounded-[10px] bg-white p-2 sm:hidden md:hidden ">
               <svg
                 viewBox="0 0 29 29"
                 xmlns="http://www.w3.org/2000/svg"
@@ -28,7 +28,7 @@ const Contacts = () => {
                 ></path>
               </svg>
             </div>
-            <p className="mb-4 mt-[18px] text-[17px] font-bold text-white">
+            <p className="mb-4 mt-[18px] text-[17px] font-bold text-white sm:mt-[10px] md:mt-[10px]">
               Telegramda sharh <br />
               qoldiring yoki savol bering
             </p>
@@ -58,7 +58,10 @@ const Contacts = () => {
         <h4 className="mb-2 mt-[18px] text-[20px] font-bold leading-6">
           Yagona aloqa markazi
         </h4>
-        <Link to="tel:998712005400" className="text-[16px] hover:underline">
+        <Link
+          to="tel:998712005400"
+          className="text-[16px] hover:underline sm:text-[14px] md:text-[14px]"
+        >
           +998712005400
         </Link>
       </section>
