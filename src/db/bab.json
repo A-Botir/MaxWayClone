@@ -115,7 +115,7 @@
     "id": 30,
     "title": "Lavash",
     "description": "Lavash, mol go'shti-donar, pomidor, chipslar, pomidor sousi, mayonez",
-    "category": "klab",
+    "category": "lavash",
     "price": 30000,
     "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2F456ce560-f72a-4993-81e5-3a06ca4bf7d3&w=1920&q=75",
     "set": ["standart", "pishloqli", "achchiq", "klassik"]
@@ -124,7 +124,7 @@
     "id": 31,
     "title": "Lavash mini",
     "description": "Pita, mol go'shti-donar, pomidor, chipslar, pomidor sousi, mayonez, Xoxland pishloq",
-    "category": "klab",
+    "category": "lavash",
     "price": 25000,
     "img": "https://maxway.uz/_next/image?url=https%3A%2F%2Fcdn.delever.uz%2Fdelever%2Fdc9f9ebc-157f-4cd2-b9cc-1087eb9ded8c&w=1920&q=75",
     "set": ["mol go'shtli", "pishloqli", "klassik"]

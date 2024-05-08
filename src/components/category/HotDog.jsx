@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { UseAllContext } from "../../App";
 
 const HotDog = () => {
-  const { foods, addToCart, showButton } = useContext(UseAllContext);
+  const { foods, addToCart, showButton, increaseToCart, decreaseCount, count } =
+    useContext(UseAllContext);
 
   return (
     <div className="pt-[80px] sm:pt-[54px] md:pt-[54px]" id="hotdog">
@@ -40,7 +41,7 @@ const HotDog = () => {
                   </p>
                   {showButton ? (
                     <button
-                      className="md:w-full sm:w-full transform rounded-[16px] bg-[#51267d] px-6 py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:rounded-xl sm:py-[6px] md:rounded-[14px] md:py-[6px]"
+                      className="transform rounded-[16px] bg-[#51267d] px-6 py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:w-full sm:rounded-xl sm:py-[6px] md:w-full md:rounded-[14px] md:py-[6px]"
                       onClick={() => addToCart(food)}
                     >
                       Qo'shish
