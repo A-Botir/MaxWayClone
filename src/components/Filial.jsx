@@ -71,7 +71,6 @@ const catalogArray = catalogData.title.map((title, index) => ({
   title,
   time: catalogData.time[index],
   location: catalogData.location[index],
-  worktime: catalogData.worktime[index],
 }));
 
 const Filial = () => {
