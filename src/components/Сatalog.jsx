@@ -102,10 +102,12 @@ const Сatalog = () => {
   return (
     <div className="flex flex-col gap-6">
       {catalogArray.map((item, index) => (
-        <div className="w-[50%]" key={index}>
-          <div className="rounded-xl bg-white px-5 py-4 shadow-[0_0_12px_#00000004]">
+        <div className="w-[50%] sm:w-[90%] md:w-[85%]" key={index}>
+          <div className="rounded-xl bg-white px-5 py-4 shadow-[0_0_12px_#00000004] sm:p-4 md:p-4">
             <div className="mb-[6px] flex items-start justify-between border-b border-[#eaeaea] pb-3">
-              <h4 className=" text-[20px] font-bold leading-6">{item.title}</h4>
+              <h4 className="text-[20px] font-bold leading-6 sm:text-[18px]">
+                {item.title}
+              </h4>
               <p className="text-[#5ac53a]">{item.time}</p>
             </div>
             <p>{item.location}</p>

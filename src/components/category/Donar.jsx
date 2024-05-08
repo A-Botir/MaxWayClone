@@ -7,8 +7,10 @@ const Donar = () => {
 
   return (
     <div className="pt-[80px] sm:pt-[54px] md:pt-[54px]" id="donar">
-     <h2 className="mb-5 text-[28px] font-bold sm:mb-4 sm:text-[24px] md:mb-4 md:text-[24px]">🍱Donar Kebab</h2>
-     <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 md:grid-cols-3">
+      <h2 className="mb-5 text-[28px] font-bold sm:mb-4 sm:text-[24px] md:mb-4 md:text-[24px]">
+        🍱Donar Kebab
+      </h2>
+      <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {foods
           .filter((food) => food.category === "donar")
           .map((food) => (
@@ -20,26 +22,26 @@ const Donar = () => {
                 <img
                   src={food.img}
                   alt="fast-food img"
-                  className="box-border w-full rounded-t-[16px] object-fill"
+                  className="box-border h-full w-full rounded-t-[16px] object-fill"
                 />
               </div>
               <div className="px-4 py-3 sm:px-2 sm:pb-2 sm:pt-4 md:px-2 md:pb-2 md:pt-4">
-                <h4 className="md text-[18px] font-semibold sm:text-[16px] sm:font-normal md:text-[16px] md:font-normal">
+                <h4 className="text-[18px] font-semibold sm:mb-1 sm:text-[16px] sm:font-normal md:mb-1 md:text-[16px] md:font-normal">
                   {food.title}
                 </h4>
-                <p className="mb-3 mt-2 text-[#48535b] sm:m-0 sm:text-[12px] md:m-0 md:text-[12px]">
+                <p className="mb-3 mt-2 h-12 overflow-hidden text-[#48535b] sm:mb-1 sm:h-9 sm:text-[12px] md:mb-1 md:h-10 md:text-[12px]">
                   {food.description}
                 </p>
-                <div className="flex items-center justify-between">
-                  <p>
+                <div className="flex items-center justify-between sm:flex-col sm:items-start md:flex-col md:items-start">
+                  <p className="sm:mb-1 md:mb-1">
                     <span className="text-[18px] font-bold sm:text-[16px] md:text-[16px]">
                       {food.price}
                     </span>
-                    &nbsp; &nbsp; so'mdan
+                    &nbsp;so'm
                   </p>
                   {showButton ? (
                     <button
-                      className="transform rounded-[16px] bg-[#51267d] px-6  py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:rounded-xl sm:py-[6px] md:rounded-[14px] md:py-[6px]"
+                      className="md:w-full sm:w-full transform rounded-[16px] bg-[#51267d] px-6 py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:rounded-xl sm:py-[6px] md:rounded-[14px] md:py-[6px]"
                       onClick={() => addToCart(food)}
                     >
                       Qo'shish
