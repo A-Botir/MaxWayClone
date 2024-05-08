@@ -5,8 +5,11 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
+import { useTheme } from "@mui/material/styles";
+import { useMediaQuery } from "@mui/material";
 
 const NavCarousel = () => {
+  const theme = useTheme();
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const Navlink = ({ url, children }) => (
@@ -15,13 +18,15 @@ const NavCarousel = () => {
     </a>
   );
 
+  const isSmMd = useMediaQuery(theme.breakpoints.between("xs", "md"));
+
   return (
     <div className="mt-8">
       <div className="flex items-center justify-center">
         <Swiper
           modules={[Navigation, Scrollbar, A11y, EffectFade]}
           spaceBetween={8}
-          slidesPerView={7}
+          slidesPerView={isSmMd ? 4 : 7}
           onSwiper={(swiper) => console.log(swiper)}
           initialSlide={currentSlide}
           navigation
@@ -34,7 +39,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(1)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 1 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px]  ${currentSlide === 1 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍟🍔🥤Maxi BOX
                 </p>
@@ -48,7 +53,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(2)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 2 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 2 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🥪Klab-Sendvich
                 </p>
@@ -62,7 +67,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(3)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 3 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 3 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🌯Lavash
                 </p>
@@ -76,7 +81,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(4)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 4 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 4 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🌮Shaurma
                 </p>
@@ -90,7 +95,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(5)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 5 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 5 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🫔Panini
                 </p>
@@ -104,7 +109,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(6)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 6 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 6 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍔Burger
                 </p>
@@ -118,7 +123,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(7)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 7 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 7 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍱Donar kebab
                 </p>
@@ -132,7 +137,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(8)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 8 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 8 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🌭Hot-Dog
                 </p>
@@ -146,7 +151,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(9)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 9 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 9 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍟Gazaklar
                 </p>
@@ -160,7 +165,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(10)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 10 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 10 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍚Tamaddilar
                 </p>
@@ -174,7 +179,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(11)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 11 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 11 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🍰Desertlar
                 </p>
@@ -188,7 +193,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(12)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 12 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 12 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🥤Ichimliklar
                 </p>
@@ -202,7 +207,7 @@ const NavCarousel = () => {
                 onClick={() => setCurrentSlide(13)}
               >
                 <p
-                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] ${currentSlide === 13 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
+                  className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 13 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
                   🥫Souslar
                 </p>

@@ -6,9 +6,11 @@ const Sous = () => {
     useContext(UseAllContext);
 
   return (
-    <div className="pt-[80px]" id="sous">
-      <h2 className="mb-5 text-[28px] font-bold">🥫Souslar</h2>
-      <div className="grid grid-cols-4 gap-4">
+    <div className="pt-[80px] sm:pt-[54px] md:pt-[54px]" id="sous">
+      <h2 className="mb-5 text-[28px] font-bold sm:mb-4 sm:text-[24px] md:mb-4 md:text-[24px]">
+        🥫Souslar
+      </h2>
+      <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {foods
           .filter((food) => food.category === "sous")
           .map((food) => (
@@ -29,7 +31,7 @@ const Sous = () => {
                 <div className="flex items-center justify-between">
                   <p>
                     <span className="text-[18px] font-bold">{food.price} </span>
-                    &nbsp; so'mdan 
+                    &nbsp; so'mdan
                   </p>
                   {showButton ? (
                     <button

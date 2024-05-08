@@ -5,9 +5,9 @@ const Gazak = () => {
     useContext(UseAllContext);
 
   return (
-    <div className="pt-[80px]" id="gazak">
-      <h2 className="mb-5 text-[28px] font-bold">🍟Gazaklar</h2>
-      <div className="grid grid-cols-4 gap-4">
+    <div className="pt-[80px] sm:pt-[54px] md:pt-[54px]" id="gazak">
+     <h2 className="mb-5 text-[28px] font-bold sm:mb-4 sm:text-[24px] md:mb-4 md:text-[24px]">🍟Gazaklar</h2>
+     <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {foods
           .filter((food) => food.category === "gazak")
           .map((food) => (

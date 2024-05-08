@@ -8,9 +8,9 @@ const Footer = () => {
   );
 
   return (
-    <footer className="border-t border-[#eef0f2] bg-white py-8">
+    <footer className="border-t border-[#eef0f2] bg-white py-8 sm:py-6 md:py-6">
       <div className="container">
-        <div className="mb-10 flex items-center justify-between">
+        <div className="mb-10 flex items-center justify-between sm:mb-6 sm:flex-col sm:items-start sm:gap-y-4 md:mb-8 md:flex-col md:items-start md:gap-y-4">
           <NavLink to="/">
             <div className="max-h-13 max-w-13  sm:max-w-[38px]  md:max-h-[38px]">
               <img
@@ -20,29 +20,41 @@ const Footer = () => {
               />
             </div>
           </NavLink>
-          <nav className="sm:hidden md:hidden">
-            <ul className="flex items-center gap-8">
+          <nav>
+            <ul className="flex items-center gap-8 sm:flex-col sm:items-start sm:gap-4 md:flex-col md:items-start md:gap-5">
               <li>
                 <NavLink to="/branches">
-                  <p className={`py-1 text-[18px]`}>Filiallar</p>
+                  <p
+                    className={`py-1 text-[18px] hover:text-[#51267d] sm:text-[16px]`}
+                  >
+                    Filiallar
+                  </p>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/about">
-                  <p className={`py-1 text-[18px]`}>Biz haqimizda</p>
+                  <p
+                    className={`py-1 text-[18px] hover:text-[#51267d] sm:text-[16px]`}
+                  >
+                    Biz haqimizda
+                  </p>
                 </NavLink>
               </li>
               <li>
                 <NavLink to="/contacts">
-                  <p className={`py-1 text-[18px]`}>Bog'lanish</p>
+                  <p
+                    className={`py-1 text-[18px] hover:text-[#51267d] sm:text-[16px]`}
+                  >
+                    Bog'lanish
+                  </p>
                 </NavLink>
               </li>
             </ul>
           </nav>
           <div className="h-1 w-1"></div>
         </div>
-        <div className="flex items-center justify-between  border-t border-[#eef0f2] pt-5">
-          <p className="text-[16px] text-[#808080]">
+        <div className="flex items-center justify-between  border-t border-[#eef0f2] pt-5 sm:pt-4 md:pt-3">
+          <p className="text-[16px] text-[#808080] sm:text-[14px] md:text-[14px]">
             © Delever 2020 - 2024 Barcha huquqlar himoyalangan
           </p>
           <div className="flex items-center justify-center gap-4">

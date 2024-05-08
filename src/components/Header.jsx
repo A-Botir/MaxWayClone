@@ -39,10 +39,10 @@ const Header = () => {
   };
 
   return (
-    <div
+    <header
       className={` ${location.pathname === "/" ? "" : "border-#0000000f border-b"}`}
     >
-      <header className="container flex items-center justify-between py-4">
+      <div className="container flex items-center justify-between py-4">
         <div className="flex items-center gap-10 sm:gap-1 md:gap-1">
           <span className="hidden sm:block md:block">
             <IconButton
@@ -224,8 +224,32 @@ const Header = () => {
             </button>
           </div>
         </div>
-      </header>
-    </div>
+      </div>
+      <div className="container hidden py-2 sm:block">
+        <button className="flex items-center gap-2" onClick={openMod}>
+          <div className="flex h-9 w-8 items-center justify-center rounded-[50%] bg-[#f1eff4]">
+            <svg
+              className="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06"
+              focusable="false"
+              aria-hidden="true"
+              viewBox="0 0 24 24"
+              data-testid="FmdGoodIcon"
+              fill="#51267d"
+              width={20}
+              height={20}
+            >
+              <path d="M12 2c-4.2 0-8 3.22-8 8.2 0 3.32 2.67 7.25 8 11.8 5.33-4.55 8-8.48 8-11.8C20 5.22 16.2 2 12 2zm0 10c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z"></path>
+            </svg>
+          </div>
+          <div className="flex items-center gap-1">
+            <p className=" text-[13px]">Yetkazib berish:</p>
+            <p className="text-[13px] text-[#51267d]">
+              улица Файзибаланд, Ташкент
+            </p>
+          </div>
+        </button>
+      </div>
+    </header>
   );
 };
 

@@ -16,7 +16,7 @@ import {
 
 const CardContainer = () => {
   return (
-    <section className="mb-10 mt-[70px]">
+    <section className="mb-10 mt-[70px] sm:mt-[54px] md:mt-[54px]">
       <MaxBox />
       <KlabSend />
       <Lavash />
