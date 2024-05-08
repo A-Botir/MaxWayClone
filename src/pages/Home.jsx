@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import CardContainer from "../components/CardContainer";
 import Hero from "../components/Hero";
 import NavCarousel from "../components/NavCarousel";
@@ -10,7 +10,9 @@ const Home = () => {
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
-      if (scrollY > 660) {
+      const threshold = window.innerWidth >= 768 ? 660 : 340;
+
+      if (scrollY > threshold) {
         setShowStickyNavbar(true);
       } else {
         setShowStickyNavbar(false);
@@ -25,7 +27,11 @@ const Home = () => {
   }, []);
 
   return (
-    <>
+    <div
+      className={
+        showStickyNavbar ? "stickyNavbarVisible" : "stickyNavbarHidden"
+      }
+    >
       <div className="container py-3">
         <Hero />
         <NavCarousel />
@@ -34,7 +40,7 @@ const Home = () => {
       <div className="container">
         <CardContainer />
       </div>
-    </>
+    </div>
   );
 };
 
