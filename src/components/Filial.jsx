@@ -25,26 +25,26 @@ const catalogData = {
     "MAX WAY MINOR",
   ],
   time: [
-    "Restoran soat 22:00 da yopiladi",
-    "Restoran soat 22:00 da yopiladi",
-    "Restoran soat 04:00 da yopiladi",
-    "Restoran soat 23:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 22:00 da yopiladi",
-    "Restoran soat 22:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 23:00 da yopiladi",
-    "Restoran soat 01:00 da yopiladi",
-    "Restoran soat 22:00 da yopiladi",
-    "Restoran soat 04:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 01:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
-    "Restoran soat 03:00 da yopiladi",
+    "22:00",
+    "22:00",
+    "04:00",
+    "23:00",
+    "03:00",
+    "03:00",
+    "03:00",
+    "22:00",
+    "22:00",
+    "03:00",
+    "23:00",
+    "01:00",
+    "22:00",
+    "04:00",
+    "03:00",
+    "03:00",
+    "01:00",
+    "03:00",
+    "03:00",
+    "03:00",
   ],
   location: [
     "улица Беруни, 47, Ташкент",
@@ -94,7 +94,7 @@ const Filial = () => {
                 className="w-full rounded-xl border border-[#e5e9eb] bg-white px-4 py-[10px] active:border-[#51267d]"
                 key={index}
               >
-                <div className="w-[50%] sm:w-[60%]  md:w-[40%] ">
+                <div>
                   <div className="mb-1 flex items-center gap-2">
                     <svg
                       class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-1k33q06"
@@ -117,7 +117,9 @@ const Filial = () => {
                     {item.location}
                   </p>
                   <p className="text-[#5982e7] sm:text-[12px] md:text-[12px]">
+                    {t("Delivery_time1")}
                     {item.time}
+                    {t("Delivery_time2")}
                   </p>
                 </div>
               </li>

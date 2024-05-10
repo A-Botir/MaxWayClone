@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { UseAllContext } from "../App";
+import { useContext } from "react";
 
 const catalogData = {
   title: [
@@ -24,26 +26,26 @@ const catalogData = {
     "MAX WAY MINOR",
   ],
   time: [
-    "22:00 gacha ochiq",
-    "22:00 gacha ochiq",
-    "04:00 gacha ochiq",
-    "23:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "22:00 gacha ochiq",
-    "22:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "23:00 gacha ochiq",
-    "01:00 gacha ochiq",
-    "22:00 gacha ochiq",
-    "04:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "01:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "03:00 gacha ochiq",
-    "03:00 gacha ochiq",
+    "22:00",
+    "22:00",
+    "04:00",
+    "23:00",
+    "03:00",
+    "03:00",
+    "03:00",
+    "22:00",
+    "22:00",
+    "03:00",
+    "23:00",
+    "01:00",
+    "22:00",
+    "04:00",
+    "03:00",
+    "03:00",
+    "01:00",
+    "03:00",
+    "03:00",
+    "03:00",
   ],
   location: [
     "улица Беруни, 47, Ташкент",
@@ -68,26 +70,26 @@ const catalogData = {
     "MaxWay",
   ],
   worktime: [
-    "Du-Yak: 10:00-22:00",
-    "Du-Yak: 10:00-22:00",
-    "Du-Yak: 10:00-04:00",
-    "Du-Yak: 10:00-23:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-22:00",
-    "Du-Yak: 10:00-22:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-23:00",
-    "Du-Yak: 10:00-01:00",
-    "Du-Yak: 10:00-22:00",
-    "Du-Yak: 10:00-04:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-01:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-03:00",
-    "Du-Yak: 10:00-03:00",
+    " 10:00-22:00",
+    " 10:00-22:00",
+    " 10:00-04:00",
+    " 10:00-23:00",
+    " 10:00-03:00",
+    " 10:00-03:00",
+    " 10:00-03:00",
+    " 10:00-22:00",
+    " 10:00-22:00",
+    " 10:00-03:00",
+    " 10:00-23:00",
+    " 10:00-01:00",
+    " 10:00-22:00",
+    " 10:00-04:00",
+    " 10:00-03:00",
+    " 10:00-03:00",
+    " 10:00-01:00",
+    " 10:00-03:00",
+    " 10:00-03:00",
+    " 10:00-03:00",
   ],
 };
 
@@ -99,6 +101,8 @@ const catalogArray = catalogData.title.map((title, index) => ({
 }));
 
 const Сatalog = () => {
+  const { t } = useContext(UseAllContext);
+
   return (
     <div className="flex flex-col gap-6">
       {catalogArray.map((item, index) => (
@@ -108,16 +112,27 @@ const Сatalog = () => {
               <h4 className="text-[20px] font-bold leading-6 sm:text-[18px]">
                 {item.title}
               </h4>
-              <p className="text-[#5ac53a]">{item.time}</p>
+              <p className="text-[#5ac53a]">
+                {t("Branches_open")}
+                {item.time}
+                {t("Branches_open_r")}
+              </p>
             </div>
             <p>{item.location}</p>
             <div className="flex items-center justify-between py-3">
               <div>
-                <p className="mb-[6px] text-[#808080]">Ish vaqti:</p>
-                <p>{item.worktime}</p>
+                <p className="mb-[6px] text-[#808080]">
+                  {t("Branches_wtime")}:
+                </p>
+                <p>
+                  {t("Branches_weeks")}
+                  {item.worktime}
+                </p>
               </div>
               <div>
-                <p className="mb-[6px] text-right text-[#808080]">Telefon:</p>
+                <p className="mb-[6px] text-right text-[#808080]">
+                  {t("Branches_phone")}
+                </p>
                 <p>
                   <Link to="tel:998712005400" target="_blank">
                     +998712005400

@@ -21,7 +21,7 @@ const Branches = () => {
               setPagestate(1);
             }}
           >
-            {t("catalog")}
+            {t("Branches_catalog")}
           </button>
           <button
             className={`w-[145px] transform rounded-[20px] py-[10px] text-center align-middle font-medium leading-6 duration-200 active:scale-[0.95] sm:w-auto sm:flex-grow md:w-auto md:flex-grow ${pagestate == 2 ? "bg-[#51267d] text-white" : "bg-[#f1eff4] text-[#48535b]"}`}
@@ -29,7 +29,7 @@ const Branches = () => {
               setPagestate(2);
             }}
           >
-            {t("map")}
+            {t("Branches_map")}
           </button>
         </div>
       </div>

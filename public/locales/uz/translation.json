@@ -23,8 +23,13 @@
   "Menu_login": "Kirish",
   "add_count": "Qo'shish",
   "copyright": "© Delever 2020 - 2024 Barcha huquqlar himoyalangan",
-  "catalog": "Ro'yxat",
-  "map": "Xarita",
+  "Branches_catalog": "Ro'yxat",
+  "Branches_map": "Xarita",
+  "Branches_wtime": "Ish vaqti:",
+  "Branches_phone": "Telefon:",
+  "Branches_open": "",
+  "Branches_open_r": " gacha ochiq",
+  "Branches_weeks": "Du-Yak:",
   "About_title": "Kompaniya haqida",
   "About_desqription1": "Kompaniya 2005 yilning fevral oyida Toshkent shahrida tashkil etilgan. Hozirda kompaniyaning Toshkent shahrida 20 ta filiali mavjud.",
   "About_desqription2": "Taomnoma asosan klаb sendvichlari, hot-doglar, burgerlar, lavashlar va donarlardan iborat. Bizning ustuvor yo'nalishlarimiz - ingredientlarning yangiligi va sifati, qo'shimchalarning xilma-xilligi, arzon narxlar va mehmonlarning takliflariga e'tibor.",
@@ -55,5 +60,7 @@
   "Delivery_map": "Olib ketish",
   "Delivery_placeholder1": "Yetkazib berish manzili",
   "Delivery_placeholder2": "Restoran nomi bo'yicha qidirish",
-  "Delivery_btn": "Belgilash"
+  "Delivery_btn": "Belgilash",
+  "Delivery_time1": "Restoran soat ",
+  "Delivery_time2": " da ochiladi"
 }

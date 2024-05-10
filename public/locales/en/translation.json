@@ -23,8 +23,13 @@
   "Menu_login": "Log in",
   "add_count": "Add",
   "copyright": "© Delever 2020 - 2024 All rights reserved",
-  "catalog": "List",
-  "map": "Map",
+  "Branches_catalog": "List",
+  "Branches_map": "Map",
+  "Branches_wtime": "Schedule:",
+  "Branches_phone": "Phone:",
+  "Branches_open": "Open until ",
+  "Branches_open_r": "",
+  "Branches_weeks": "Mon-Sun:",
   "About_title": "About company",
   "About_desqription1": "The company was founded in February 2005 in Tashkent. At the moment, the company has 20 branches in Tashkent.",
   "About_desqription2": "The menu consists mainly of club sandwiches, hot dogs, burgers, pita bread and donars. Our priorities are the freshness and quality of ingredients, variety of toppings, affordable prices and attention to guests' requests.",
@@ -55,5 +60,7 @@
   "Delivery_map": "Takeaway",
   "Delivery_placeholder1": "Delivery address",
   "Delivery_placeholder2": "Search by restaurant name",
-  "Delivery_btn": "Select"
+  "Delivery_btn": "Select",
+  "Delivery_time1": "The restaurant will open at ",
+  "Delivery_time2": ""
 }
