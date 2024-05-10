@@ -25,7 +25,7 @@ const style = {
 };
 
 const Delivery = () => {
-  const { opnmod, setOpnmod } = useContext(UseAllContext);
+  const { opnmod, setOpnmod, t } = useContext(UseAllContext);
   const [deliver, setDeliver] = useState(1);
 
   const closeMod = () => setOpnmod(false);
@@ -47,10 +47,10 @@ const Delivery = () => {
           <Box sx={style}>
             <div className="relative px-6 pt-6 sm:static sm:p-0 md:static md:p-0">
               <h2 className="mb-2 text-[24px] font-bold leading-6 sm:hidden md:hidden">
-                Qabul qilib olish turini tanlang
+                {t("Delivery_title")}
               </h2>
               <p className="mb-4 leading-6 text-[#808080] sm:hidden md:hidden">
-                Real vaqt va joylashuvga mos menyuni ko'rish uchun
+                {t("Delivery_subtitle")}
               </p>
               <div className="grid w-full grid-cols-2 gap-4  sm:flex sm:flex-col-reverse sm:overflow-auto md:flex md:flex-col-reverse md:overflow-auto">
                 <div className="col-span-1 sm:relative sm:w-full sm:px-3 sm:pt-9 md:relative md:w-full md:px-4 md:pt-10">
@@ -67,7 +67,7 @@ const Delivery = () => {
                         setDeliver(1);
                       }}
                     >
-                      Yetkazib berish
+                      {t("Delivery_list")}
                     </button>
                     <button
                       className={`w-[50%] transform rounded-[22px] px-6 py-[14px] text-center align-middle text-[16px] leading-4 duration-200 hover:text-[#51267d] active:scale-[0.95] ${deliver == 2 ? "bg-[#f1eff4] text-[#51267d]" : "bg-[#f6f4f2] text-[#5b6871]"}`}
@@ -75,7 +75,7 @@ const Delivery = () => {
                         setDeliver(2);
                       }}
                     >
-                      Olib ketish
+                      {t("Delivery_map")}
                     </button>
                   </div>
                   {deliver === 1 && <Adress />}
@@ -84,7 +84,7 @@ const Delivery = () => {
                     className="w-full transform rounded-[20px] bg-[#51267d] py-[10px] text-center align-middle font-medium leading-6 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] disabled:bg-[#dde2e4] disabled:text-[#808080]"
                     onClick={setMapConfig}
                   >
-                    Belgilash
+                    {t("Delivery_btn")}
                   </button>
                   <span className="absolute right-1 top-1 z-20 sm:right-1 sm:top-1 md:right-1 md:top-1">
                     <IconButton

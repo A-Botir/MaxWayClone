@@ -14,40 +14,43 @@ import {
 } from "@mui/material";
 
 const Menu = () => {
-  const [language, setLanguage] = useState(10);
-  const { toggleDrawer, setOpnmenu, opnmenu, handleOpen } =
+  const { toggleDrawer, setOpnmenu, opnmenu, handleOpen, t, i18n } =
     useContext(UseAllContext);
-  const location = useLocation();
+  const [language, setLanguage] = useState("uz");
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-  };
+  const location = useLocation();
 
   const renderValue = (selected) => {
     const languages = [
       {
-        value: 10,
+        value: "uz",
         imgSrc: "https://maxway.uz/images/uz.svg",
         label: "O'zbekcha",
       },
       {
-        value: 21,
+        value: "ru",
         imgSrc: "https://maxway.uz/images/ru.svg",
         label: "Русский",
       },
       {
-        value: 22,
+        value: "en",
         imgSrc: "https://maxway.uz/images/en.svg",
         label: "English",
       },
     ];
     const selectedLanguage = languages.find((lang) => lang.value === selected);
     return (
-      <div className="flex space-x-2">
+      <div className="flex items-center space-x-2">
         <img src={selectedLanguage.imgSrc} alt={selectedLanguage.label} />
-        <p>{selectedLanguage.label}</p>
+        <p className="text-[16px]">{selectedLanguage.label}</p>
       </div>
     );
+  };
+
+  const changeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
   };
 
   const DrawerList = (
@@ -63,7 +66,7 @@ const Menu = () => {
             justifyContent: "space-between",
           }}
         >
-          <h2 className="text-[20px] font-semibold">Menu</h2>
+          <h2 className="text-[20px] font-semibold">{t("Head_nav1")}</h2>
           <IconButton
             color="inherit"
             onClick={() => setOpnmenu(false)}
@@ -98,7 +101,7 @@ const Menu = () => {
             labelId="demo-simple-select-autowidth-label"
             id="demo-simple-select-autowidth"
             value={language}
-            onChange={handleChange}
+            onChange={changeLanguage}
             renderValue={renderValue}
             sx={{
               outline: "none",
@@ -106,19 +109,19 @@ const Menu = () => {
               width: "100%",
             }}
           >
-            <MenuItem value={10}>
+            <MenuItem value="uz">
               <div className="flex items-center space-x-2">
                 <img src="https://maxway.uz/images/uz.svg" alt="uzb" />
                 <p>O'zbekcha</p>
               </div>
             </MenuItem>
-            <MenuItem value={21}>
+            <MenuItem value="ru">
               <div className="flex items-center space-x-2">
                 <img src="https://maxway.uz/images/ru.svg" alt="rus" />
                 <p>Русский</p>
               </div>
             </MenuItem>
-            <MenuItem value={22}>
+            <MenuItem value="en">
               <div className="flex items-center space-x-2">
                 <img src="https://maxway.uz/images/en.svg" alt="eng" />
                 <p>English</p>
@@ -144,7 +147,7 @@ const Menu = () => {
               borderRadius: "12px",
             }}
           >
-            Kirish
+            {t("Menu_login")}
           </ListItemButton>
         </ListItem>
         <ListItem
@@ -159,7 +162,7 @@ const Menu = () => {
             <div
               className={`flex h-11 w-full items-center justify-between rounded-xl px-4 hover:bg-[#f6f8f9] ${location.pathname === "/" ? "bg-[#f6f8f9]" : ""}`}
             >
-              <p className="text-[16px]">Bosh sahifa</p>
+              <p className="text-[16px]">{t("Menu_home")}</p>
               <svg
                 className={`MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv ${location.pathname === "/" ? "block" : "hidden"}`}
                 focusable="false"
@@ -178,7 +181,7 @@ const Menu = () => {
             <div
               className={`flex h-11 w-full items-center justify-between rounded-xl px-4 hover:bg-[#f6f8f9] ${location.pathname === "/branches" ? "bg-[#f6f8f9]" : ""}`}
             >
-              <p className="text-[16px]">Filiallar</p>
+              <p className="text-[16px]">{t("Head_nav2")}</p>
               <svg
                 className={`MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv ${location.pathname === "/branches" ? "block" : "hidden"}`}
                 focusable="false"
@@ -197,7 +200,7 @@ const Menu = () => {
             <div
               className={`flex h-11 w-full items-center justify-between rounded-xl px-4 hover:bg-[#f6f8f9] ${location.pathname === "/about" ? "bg-[#f6f8f9]" : ""}`}
             >
-              <p className="text-[16px]">Biz haqimizda</p>
+              <p className="text-[16px]">{t("Head_nav3")}</p>
               <svg
                 className={`MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv ${location.pathname === "/about" ? "block" : "hidden"}`}
                 focusable="false"
@@ -216,7 +219,7 @@ const Menu = () => {
             <div
               className={`flex h-11 w-full items-center justify-between rounded-xl px-4 hover:bg-[#f6f8f9] ${location.pathname === "/contacts" ? "bg-[#f6f8f9]" : ""}`}
             >
-              <p className="text-[16px]">Bog'lanish</p>
+              <p className="text-[16px]">{t("Head_nav4")}</p>
               <svg
                 className={`MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-vubbuv ${location.pathname === "/contacts" ? "block" : "hidden"}`}
                 focusable="false"

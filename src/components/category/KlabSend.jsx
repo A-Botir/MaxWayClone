@@ -2,13 +2,20 @@ import { useContext } from "react";
 import { UseAllContext } from "../../App";
 
 const KlabSend = () => {
-  const { foods, addToCart, increaseToCart, decreaseCount, count, showButton } =
-    useContext(UseAllContext);
+  const {
+    foods,
+    addToCart,
+    increaseToCart,
+    decreaseCount,
+    count,
+    showButton,
+    t,
+  } = useContext(UseAllContext);
 
   return (
     <div className="pt-[80px] sm:pt-[54px] md:pt-[54px]" id="klabsend">
       <h2 className="mb-5 text-[28px] font-bold sm:mb-4 sm:text-[24px] md:mb-4 md:text-[24px]">
-        🥪Klab-Sendvich
+        {t("Navbar_2")}
       </h2>
       <div className="grid grid-cols-4 gap-4 sm:grid-cols-2 md:grid-cols-3">
         {foods
@@ -18,7 +25,7 @@ const KlabSend = () => {
               className="sm:rouned-xl col-span-1 rounded-[16px] bg-white shadow-[0_0_12px_#0000000D] md:rounded-[14px]"
               key={food.id}
             >
-              <div className="max-h-[197px] overflow-y-hidden sm:max-h-[299px] md:max-h-[264px]">
+             <div className="max-h-[197px] overflow-y-hidden sm:h-[124px] md:h-[124px]">
                 <img
                   src={food.img}
                   alt="fast-food img"
@@ -29,7 +36,7 @@ const KlabSend = () => {
                 <h4 className="text-[18px] font-semibold sm:mb-1 sm:text-[16px] sm:font-normal md:mb-1 md:text-[16px] md:font-normal">
                   {food.title}
                 </h4>
-                <p className="mb-3 mt-2 h-12 overflow-hidden text-[#48535b] sm:mb-1 sm:h-9 sm:text-[12px] md:mb-1 md:h-10 md:text-[12px]">
+                  <p className="h-[50px] mb-3 mt-2 w-full overflow-hidden text-[#48535b] sm:mb-1 sm:h-9 sm:text-[12px] md:mb-1 md:h-10 md:text-[12px]">
                   {food.description}
                 </p>
                 <div className="flex items-center justify-between sm:flex-col sm:items-start md:flex-col md:items-start">
@@ -37,14 +44,14 @@ const KlabSend = () => {
                     <span className="text-[18px] font-bold sm:text-[16px] md:text-[16px]">
                       {food.price}
                     </span>
-                    &nbsp;so'm
+                    &nbsp;{t("uz_currency")}
                   </p>
                   {showButton ? (
                     <button
-                      className="md:w-full sm:w-full transform rounded-[16px] bg-[#51267d] px-6 py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:rounded-xl sm:py-[6px] md:rounded-[14px] md:py-[6px]"
+                      className="transform rounded-[16px] bg-[#51267d] px-6 py-[10px] text-center align-middle font-medium leading-5 text-white duration-200 hover:bg-[#5e318b] active:scale-[0.95] sm:w-full sm:rounded-xl sm:py-[6px] md:w-full md:rounded-[14px] md:py-[6px]"
                       onClick={() => addToCart(food)}
                     >
-                      Qo'shish
+                      {t("add_count")}
                     </button>
                   ) : (
                     <div className="flex items-center rounded-[20px] border border-[#51267d] py-[6px]">

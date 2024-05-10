@@ -1,12 +1,14 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import { UseAllContext } from "../App";
+import { useContext } from "react";
 
 const Contacts = () => {
+  const { t } = useContext(UseAllContext);
   return (
     <div className="container">
       <section className="py-8 sm:min-h-[52vh] md:min-h-[68vh]">
         <h2 className="mb-8 text-[32px] font-semibold leading-10 sm:mb-6 sm:text-[24px] sm:leading-8 md:mb-6 md:text-[24px] md:leading-8">
-          Bog'lanish
+          {t("Head_nav4")}
         </h2>
         <div className="grid grid-cols-4 gap-6 sm:grid-cols-1 md:grid-cols-1">
           <div className="col-span-1 rounded-xl bg-[#96b1c2] py-8 pl-8 pr-3 sm:p-4 md:p-4">
@@ -29,8 +31,7 @@ const Contacts = () => {
               </svg>
             </div>
             <p className="mb-4 mt-[18px] text-[17px] font-bold text-white sm:mt-[10px] md:mt-[10px]">
-              Telegramda sharh <br />
-              qoldiring yoki savol bering
+              {t("Contacts_desqription")}
             </p>
             <Link to="https://t.me/maxwaymasterfood_bot">
               <div className="flex items-center gap-1">
@@ -49,20 +50,20 @@ const Contacts = () => {
                   ></path>
                 </svg>
                 <p className="text-[16px] leading-6 text-white hover:underline">
-                  @maxwaymasterfood_bot
+                  {t("Contacts_link")}
                 </p>
               </div>
             </Link>
           </div>
         </div>
         <h4 className="mb-2 mt-[18px] text-[20px] font-bold leading-6">
-          Yagona aloqa markazi
+          {t("Contacts_subtitle")}
         </h4>
         <Link
           to="tel:998712005400"
           className="text-[16px] hover:underline sm:text-[14px] md:text-[14px]"
         >
-          +998712005400
+          {t("Contacts_tell")}
         </Link>
       </section>
     </div>

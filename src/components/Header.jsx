@@ -5,37 +5,42 @@ import { UseAllContext } from "../App";
 
 const Header = () => {
   const location = useLocation();
-  const [language, setLanguage] = useState(10);
-  const { totalPrice, count, handleOpen, setOpnmod, toggleDrawer } =
+  const { totalPrice, count, handleOpen, setOpnmod, toggleDrawer, t, i18n } =
     useContext(UseAllContext);
+  const [language, setLanguage] = useState("uz");
 
-  const handleChange = (event) => {
-    setLanguage(event.target.value);
-  };
   const openMod = () => setOpnmod(true);
 
   const renderValue = (selected) => {
     const languages = [
       {
-        value: 10,
+        value: "uz",
         imgSrc: "https://maxway.uz/images/uz.svg",
+        label: "O'zbekcha",
       },
       {
-        value: 21,
+        value: "ru",
         imgSrc: "https://maxway.uz/images/ru.svg",
+        label: "Русский",
       },
       {
-        value: 22,
+        value: "en",
         imgSrc: "https://maxway.uz/images/en.svg",
+        label: "English",
       },
     ];
     const selectedLanguage = languages.find((lang) => lang.value === selected);
     return (
       <div className="flex space-x-2">
         <img src={selectedLanguage.imgSrc} alt={selectedLanguage.label} />
-        <p>{selectedLanguage.label}</p>
       </div>
     );
+  };
+
+  const changeLanguage = (event) => {
+    const selectedLanguage = event.target.value;
+    setLanguage(selectedLanguage);
+    i18n.changeLanguage(selectedLanguage);
   };
 
   return (
@@ -86,7 +91,7 @@ const Header = () => {
                     <p
                       className={`py-1 text-[16px] transition-all duration-200 hover:drop-shadow-item ${location.pathname === "/" ? "drop-shadow-item" : ""}`}
                     >
-                      Menu
+                      {t("Head_nav1")}
                     </p>
                   </NavLink>
                 </li>
@@ -95,7 +100,7 @@ const Header = () => {
                     <p
                       className={`py-1 text-[16px] transition-all duration-200 hover:drop-shadow-item ${location.pathname === "/branches" ? "drop-shadow-item" : ""}`}
                     >
-                      Filiallar
+                      {t("Head_nav2")}
                     </p>
                   </NavLink>
                 </li>
@@ -104,7 +109,7 @@ const Header = () => {
                     <p
                       className={`py-1 text-[16px] transition-all duration-200 hover:drop-shadow-item ${location.pathname === "/about" ? "drop-shadow-item" : ""}`}
                     >
-                      Biz haqimizda
+                      {t("Head_nav3")}
                     </p>
                   </NavLink>
                 </li>
@@ -113,7 +118,7 @@ const Header = () => {
                     <p
                       className={`py-1 text-[16px] transition-all duration-200 hover:drop-shadow-item ${location.pathname === "/contacts" ? "drop-shadow-item" : ""}`}
                     >
-                      Bog'lanish
+                      {t("Head_nav4")}
                     </p>
                   </NavLink>
                 </li>
@@ -140,9 +145,9 @@ const Header = () => {
                 </svg>
               </div>
               <div>
-                <p className=" text-[13px]">Yetkazib berish</p>
+                <p className=" text-[13px]">{t("Head_delivery_title")}</p>
                 <p className="text-[13px] text-[#51267d]">
-                  улица Файзибаланд, Ташкент
+                  {t("Head_delivery_location")}
                 </p>
               </div>
             </button>
@@ -152,7 +157,7 @@ const Header = () => {
                   labelId="demo-simple-select-autowidth-label"
                   id="demo-simple-select-autowidth"
                   value={language}
-                  onChange={handleChange}
+                  onChange={changeLanguage}
                   autoWidth
                   renderValue={renderValue}
                   sx={{
@@ -160,19 +165,19 @@ const Header = () => {
                     outline: "none",
                   }}
                 >
-                  <MenuItem value={10}>
+                  <MenuItem value="uz">
                     <div className="flex space-x-2">
                       <img src="https://maxway.uz/images/uz.svg" alt="uzb" />
                       <p>O'zbekcha</p>
                     </div>
                   </MenuItem>
-                  <MenuItem value={21}>
+                  <MenuItem value="ru">
                     <div className="flex space-x-2">
                       <img src="https://maxway.uz/images/ru.svg" alt="rus" />
                       <p>Русский</p>
                     </div>
                   </MenuItem>
-                  <MenuItem value={22}>
+                  <MenuItem value="en">
                     <div className="flex space-x-2">
                       <img src="https://maxway.uz/images/en.svg" alt="eng" />
                       <p>English</p>
@@ -203,7 +208,9 @@ const Header = () => {
                       </defs>
                     </svg>
                   </div>
-                  <p className="">{totalPrice + count * 2000} so'm</p>
+                  <p className="">
+                    {totalPrice + count * 2000} {t("uz_currency")}
+                  </p>
                 </div>
               </NavLink>
               <button
@@ -245,9 +252,9 @@ const Header = () => {
               </svg>
             </div>
             <div className="flex items-center gap-1">
-              <p className=" text-[13px]">Yetkazib berish:</p>
+              <p className=" text-[13px]">{t("Head_delivery_title")}</p>
               <p className="text-[13px] text-[#51267d]">
-                улица Файзибаланд, Ташкент
+                {t("Head_delivery_location")}
               </p>
             </div>
           </button>

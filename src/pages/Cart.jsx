@@ -10,6 +10,7 @@ const Cart = () => {
     totalPrice,
     handleOpen,
     setmapCart,
+    t,
   } = useContext(UseAllContext);
   const [isPaymentDisabled, setIsPaymentDisabled] = useState(true);
 
@@ -20,7 +21,7 @@ const Cart = () => {
   const handlePayment = () => {
     const activeLogin = localStorage.getItem("activeLogin");
     if (activeLogin && activeLogin.trim() === "authorized") {
-      alert("Buyurtma qabul qilinadi! Yetkazib berishni kuting");
+      alert(t("Cart_alert"));
       localStorage.setItem("cartStorage", JSON.stringify([]));
       setmapCart([]);
     } else {
@@ -41,7 +42,7 @@ const Cart = () => {
   return (
     <section className="container mt-8 sm:mt-6  md:mt-6 md:min-h-[65vh]">
       <h2 className="mb-8 text-[32px] font-bold leading-10 sm:mb-5 md:mb-6">
-        Savatcha
+        {t("Cart_title")}
       </h2>
       <div className="mb-20 grid grid-cols-3 gap-10 sm:mb-10 sm:grid-cols-1 sm:gap-4 md:mb-12 md:grid-cols-1 md:gap-4">
         <div className="col-span-2 rounded-[16px] bg-white pt-5 shadow-[0_0_12px_#0000000D] sm:col-span-1 md:col-span-1">
@@ -56,11 +57,11 @@ const Cart = () => {
             <div className="grid w-full grid-cols-5 items-center gap-x-3 sm:items-end sm:justify-between md:items-end md:justify-between">
               <div className="col-span-3 ">
                 <h4 className="mb-1 text-[18px] font-medium sm:text-[16px] md:text-[17px]">
-                  Kraft packet
+                  {t("Cart_default")}
                 </h4>
                 <p className="text-[#808080] sm:text-[12px] md:text-[12px]"></p>
                 <p className="hidden text-[16px]  font-semibold sm:block md:block">
-                  2 000 so'm
+                  2 000 {t("uz_currency")}
                 </p>
               </div>
               <div className="col-span-2 mr-4 flex items-center justify-between">
@@ -108,7 +109,7 @@ const Cart = () => {
                     {item.description}
                   </p>
                   <p className="hidden text-[16px]  font-semibold sm:block md:block">
-                    {item.prices} so'm
+                    {item.prices} {t("uz_currency")}
                   </p>
                 </div>
                 <div className="col-span-2 mr-4 flex items-center justify-between">
@@ -139,22 +140,22 @@ const Cart = () => {
         </div>
         <div className="col-span-1">
           <div className="sticky top-0 rounded-[16px] bg-white px-[18px] py-6 shadow-[0_0_12px_#0000000D]">
-            <h4 className="text-[20px] font-bold leading-6">Umumiy</h4>
+            <h4 className="text-[20px] font-bold leading-6">{t("total")}</h4>
             <div className="my-4 flex items-center justify-between">
-              <p className="text-[16px] leading-5">Mahsulotlar</p>
+              <p className="text-[16px] leading-5">{t("products")}</p>
               <p className="text-[16px] font-medium leading-5">
-                {totalPrice + count * 2000} so'm
+                {totalPrice + count * 2000} {t("uz_currency")}
               </p>
             </div>
             <div className="mb-4 flex items-center justify-between">
-              <p className="text-[16px] leading-5">Yetkazib berish</p>
-              <p className="text-[16px] font-medium">0 so'm</p>
+              <p className="text-[16px] leading-5">{t("delivery")}</p>
+              <p className="text-[16px] font-medium">0 {t("uz_currency")}</p>
             </div>
             <div className="border-t border-[#eaeaea]">
               <div className="my-4 flex items-center justify-between">
-                <p className="text-[16px] leading-5">To'lash uchun</p>
+                <p className="text-[16px] leading-5">{t("to_pay")}</p>
                 <p className="text-[16px] font-medium leading-5">
-                  {totalPrice + count * 2000} so'm
+                  {totalPrice + count * 2000} {t("uz_currency")}
                 </p>
               </div>
               <button
@@ -162,12 +163,10 @@ const Cart = () => {
                 disabled={isPaymentDisabled}
                 onClick={handlePayment}
               >
-                To'lov sahifasiga o'tish
+                {t("Cart_btn")}
               </button>
               <p className="mt-1 text-center text-[12px] text-red-500">
-                {isPaymentDisabled === true
-                  ? "Eng kam buyurtma narxi 40 000 so'm bo'lishi kerak"
-                  : ""}
+                {isPaymentDisabled === true ? t("Cart_error") : ""}
               </p>
             </div>
           </div>

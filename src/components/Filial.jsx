@@ -1,3 +1,6 @@
+import { UseAllContext } from "../App";
+import { useContext } from "react";
+
 const catalogData = {
   title: [
     "MAX WAY BERUNIY",
@@ -67,19 +70,22 @@ const catalogData = {
   ],
 };
 
-const catalogArray = catalogData.title.map((title, index) => ({
-  title,
-  time: catalogData.time[index],
-  location: catalogData.location[index],
-}));
-
 const Filial = () => {
+  const { t } = useContext(UseAllContext);
+
+  const catalogArray = catalogData.title.map((title, index) => ({
+    title,
+    time: catalogData.time[index],
+    location: catalogData.location[index],
+  }));
+
   return (
     <div className="w-full">
       <div className="">
         <input
           type="search"
           className="w-full rounded-xl border border-[#e5e9eb] px-4 py-[14px] outline-none focus:border-[#51267d]"
+          placeholder={t("Delivery_placeholder2")}
         />
         <div className="mb-3 mt-2 h-[260px] overflow-auto rounded-xl bg-white p-3 shadow-[0_4px_10px_#5982e729]">
           <ul className="flex flex-col gap-6 bg-white">

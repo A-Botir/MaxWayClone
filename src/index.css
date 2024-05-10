@@ -60,20 +60,17 @@
   }
 
   *::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
     height: 6px;
     background-color: #c7a2ec;
   }
   *::-webkit-scrollbar-thumb {
     background-color: #51267d;
+    border-radius: 6px;
   }
 
   .svghover:hover {
     fill: #51267d;
-  }
-
-  .swipper_2 {
-    height: 45px;
   }
 
   :root {
@@ -81,20 +78,23 @@
     --swiper-navigation-size: 20px;
   }
   .swipper-container {
-    width: 90%;
+    width: auto;
+    padding: 0 40px;
     margin: auto;
   }
 
-  .swipper_2 {
-    height: 45px;
-    padding-left: 40px;
+  .swiper-slide {
+    box-sizing: content-box;
+    width: auto;
   }
 
-  .swiper-slide {
-    width: fit-content;
+  .swipper_2 {
+    align-content: center;
+    height: 45px;
+    padding: 0 30px;
   }
 
   .swipper_3 {
-    padding-left: 40px;
+    padding: 0 30px;
   }
 }

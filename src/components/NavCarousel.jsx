@@ -6,10 +6,12 @@ import "swiper/css/navigation";
 import "swiper/css/scrollbar";
 import "swiper/css/effect-fade";
 import { useTheme } from "@mui/material/styles";
-import { useMediaQuery } from "@mui/material";
+import { UseAllContext } from "../App";
+import { useContext } from "react";
 
 const NavCarousel = () => {
   const theme = useTheme();
+  const { t } = useContext(UseAllContext);
   const [currentSlide, setCurrentSlide] = useState(1);
 
   const Navlink = ({ url, children }) => (
@@ -18,21 +20,19 @@ const NavCarousel = () => {
     </a>
   );
 
-  const isSmMd = useMediaQuery(theme.breakpoints.between("xs", "md"));
-
   return (
     <div className="mt-8">
       <div className="flex items-center justify-center">
         <Swiper
           modules={[Navigation, Scrollbar, A11y, EffectFade]}
-          spaceBetween={8}
-          slidesPerView={isSmMd ? 4 : 7}
+          spaceBetween={14}
+          slidesPerView="auto"
           onSwiper={(swiper) => console.log(swiper)}
           initialSlide={currentSlide}
           navigation
           className="swipper_2"
         >
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#maxibox"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -41,12 +41,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px]  ${currentSlide === 1 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍟🍔🥤Maxi BOX
+                  {t("Navbar_1")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#klabsend"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -55,12 +55,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 2 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🥪Klab-Sendvich
+                  {t("Navbar_2")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#lavash"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -69,12 +69,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 3 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🌯Lavash
+                  {t("Navbar_3")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#shaurma"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -83,12 +83,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 4 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🌮Shaurma
+                  {t("Navbar_4")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#panini"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -97,12 +97,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 5 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🫔Panini
+                  {t("Navbar_5")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#burger"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -111,12 +111,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 6 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍔Burger
+                  {t("Navbar_6")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#donar"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -125,12 +125,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 7 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍱Donar kebab
+                  {t("Navbar_7")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#hotdog"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -139,12 +139,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 8 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🌭Hot-Dog
+                  {t("Navbar_8")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#gazak"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -153,12 +153,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 9 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍟Gazaklar
+                  {t("Navbar_9")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#tamaddi"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -167,12 +167,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 10 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍚Tamaddilar
+                  {t("Navbar_10")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#desert"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -181,12 +181,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 11 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🍰Desertlar
+                  {t("Navbar_11")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#drink"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -195,12 +195,12 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 12 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🥤Ichimliklar
+                  {t("Navbar_12")}
                 </p>
               </button>
             </Navlink>
           </SwiperSlide>
-          <SwiperSlide>
+          <SwiperSlide className="swiper-slide">
             <Navlink url={"#sous"}>
               <button
                 className="transform active:scale-[0.95]"
@@ -209,7 +209,7 @@ const NavCarousel = () => {
                 <p
                   className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3 md:py-2 md:text-[14px] ${currentSlide === 13 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                 >
-                  🥫Souslar
+                  {t("Navbar_13")}
                 </p>
               </button>
             </Navlink>

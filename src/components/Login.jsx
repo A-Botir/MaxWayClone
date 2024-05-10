@@ -23,7 +23,7 @@ const style = {
 };
 
 const Login = () => {
-  const { open, handleClose } = useContext(UseAllContext);
+  const { open, handleClose, t } = useContext(UseAllContext);
 
   const [phoneNumber, setPhoneNumber] = useState("");
   const [confirmationCode, setConfirmationCode] = useState("");
@@ -64,15 +64,15 @@ const Login = () => {
           <Box sx={style}>
             <div className="relaive px-6 sm:px-4 md:px-4">
               <h2 className="mb-2 text-center text-[32px] font-bold leading-[52px] sm:text-left sm:text-[20px] sm:leading-8 md:text-left md:text-[24px] md:leading-8">
-                Tizimga kirish
+                {t("Login_title")}
               </h2>
               <form className="overflow-y-auto">
                 <p className="mb-8 text-center text-[18px] leading-7 text-[#808080] sm:mb-6 sm:text-left sm:text-[14px] sm:leading-5 md:mb-6 md:text-left md:text-[14px] md:leading-5">
-                  Telefon raqamingiz bilan tizimga kiring
+                  {t("Login_subtitle")}
                 </p>
                 <div className="mx-auto flex flex-col items-start gap-4 ">
                   <p className="text-[16px] sm:text-[14px] md:text-[14px]">
-                    Telefon raqam
+                    {t("Login_input1")}
                   </p>
                   <div className="flex w-full items-center rounded-xl border border-[#e5e9eb] px-3 py-[10px] focus:border-[black]">
                     <p className="text-[16px] sm:text-[14px] md:text-[14px]">
@@ -89,7 +89,7 @@ const Login = () => {
                     />
                   </div>
                   <p className="text-[16px] sm:text-[14px] md:text-[14px]">
-                    Tasdiqlash kodi
+                    {t("Login_input2")}
                   </p>
                   <input
                     value={confirmationCode}
@@ -105,7 +105,7 @@ const Login = () => {
                     disabled={!phoneNumber || !confirmationCode}
                     onClick={handleLogin}
                   >
-                    Tasdiqlash
+                    {t("Login_btn")}
                   </button>
                 </div>
                 <IconButton

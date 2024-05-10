@@ -14,7 +14,7 @@ import { useMediaQuery } from "@mui/material";
 const StickyNavbar = () => {
   const location = useLocation();
   const [currentSlide, setCurrentSlide] = useState(1);
-  const { totalPrice, count, toggleDrawer } = useContext(UseAllContext);
+  const { totalPrice, count, toggleDrawer, t } = useContext(UseAllContext);
 
   const theme = useTheme();
   const isSmMd = useMediaQuery(theme.breakpoints.between("xs", "md"));
@@ -94,13 +94,14 @@ const StickyNavbar = () => {
         <div className="flex items-center justify-center gap-4">
           <Swiper
             modules={[Navigation, Scrollbar, A11y, EffectFade]}
-            slidesPerView={isSmMd ? 4 : 7}
+            spaceBetween={12}
+            slidesPerView="auto"
             onSwiper={(swiper) => console.log(swiper)}
             initialSlide={currentSlide}
             navigation
             className="swipper_3"
           >
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#maxibox"} className="align-middle">
                 <button
                   className="transform active:scale-[0.95]"
@@ -109,12 +110,12 @@ const StickyNavbar = () => {
                   <p
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 1 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍟🍔🥤Maxi BOX
+                    {t("Navbar_1")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#klabsend"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -123,12 +124,12 @@ const StickyNavbar = () => {
                   <p
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4] hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 2 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🥪Klab-Sendvich
+                    {t("Navbar_2")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#lavash"} className="align-middle">
                 <button
                   className="transform active:scale-[0.95]"
@@ -138,12 +139,12 @@ const StickyNavbar = () => {
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 3 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🌯Lavash
+                    {t("Navbar_3")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#shaurma"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -153,12 +154,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 4 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🌮Shaurma
+                    {t("Navbar_4")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#panini"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -168,12 +169,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 5 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🫔Panini
+                    {t("Navbar_5")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#burger"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -183,12 +184,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 6 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍔Burger
+                    {t("Navbar_6")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#donar"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -198,12 +199,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 7 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍱Donar kebab
+                    {t("Navbar_7")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#hotdog"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -213,12 +214,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 8 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🌭Hot-Dog
+                    {t("Navbar_8")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#gazak"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -228,12 +229,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 9 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍟Gazaklar
+                    {t("Navbar_9")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#tamaddi"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -243,12 +244,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 10 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍚Tamaddilar
+                    {t("Navbar_10")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#desert"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -258,12 +259,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 11 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🍰Desertlar
+                    {t("Navbar_11")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#drink"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -273,12 +274,12 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 12 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🥤Ichimliklar
+                    {t("Navbar_12")}
                   </p>
                 </button>
               </Navlink>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide className="swiper-slide">
               <Navlink url={"#sous"}>
                 <button
                   className="transform active:scale-[0.95]"
@@ -288,7 +289,7 @@ hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text
                     className={`rounded-xl px-4 py-3 text-[16px] font-medium transition hover:bg-[#f1eff4]
 hover:text-[#51267d] sm:px-2 sm:py-[6px] sm:text-[12px] md:px-3  md:py-2 md:text-[14px] ${currentSlide === 13 ? "bg-[#f1eff4] text-[#51267d]" : ""}`}
                   >
-                    🥫Souslar
+                    {t("Navbar_13")}
                   </p>
                 </button>
               </Navlink>

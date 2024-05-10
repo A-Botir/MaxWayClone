@@ -7,6 +7,7 @@ import axios from "axios";
 import Login from "./components/Login";
 import Delivery from "./components/Delivery";
 import Menu from "./components/Menu";
+import { useTranslation } from "react-i18next";
 
 export const UseAllContext = createContext();
 
@@ -23,6 +24,8 @@ function App() {
     !localStorage.getItem("activeLogin") ||
       localStorage.getItem("activeLogin") === "none",
   );
+
+  const { t, i18n } = useTranslation();
 
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -144,6 +147,8 @@ function App() {
           opnmenu,
           setOpnmenu,
           toggleDrawer,
+          t,
+          i18n,
         }}
       >
         <Header />
