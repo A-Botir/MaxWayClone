@@ -42,12 +42,10 @@ const Login = () => {
     const lastSixDigits = phoneNumber.slice(-6);
     if (lastSixDigits === confirmationCode) {
       localStorage.setItem("activeLogin", "authorized");
-      alert("Avtorizatsiya muvaffaqiyatli bajarildi");
+      alert(t("login_alert2"));
       handleClose();
     } else {
-      alert(
-        "Tasdiqlash kodi yaroqsiz, raqamingizning oxirgi 6 ta raqamini kiriting!",
-      );
+      alert(t("login_alert1"));
     }
   };
 

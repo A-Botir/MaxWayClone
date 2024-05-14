@@ -62,5 +62,7 @@
   "Delivery_placeholder2": "Search by restaurant name",
   "Delivery_btn": "Select",
   "Delivery_time1": "The restaurant will open at ",
-  "Delivery_time2": ""
+  "Delivery_time2": "",
+  "login_alert1": "The verification code is invalid, please enter the last 6 digits of your number!",
+  "login_alert2": "Authorization was successful"
 }

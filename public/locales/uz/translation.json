@@ -62,5 +62,7 @@
   "Delivery_placeholder2": "Restoran nomi bo'yicha qidirish",
   "Delivery_btn": "Belgilash",
   "Delivery_time1": "Restoran soat ",
-  "Delivery_time2": " da ochiladi"
+  "Delivery_time2": " da ochiladi",
+  "login_alert1": "Tasdiqlash kodi yaroqsiz, raqamingizning oxirgi 6 ta raqamini kiriting!",
+  "login_alert2": "Avtorizatsiya muvaffaqiyatli bajarildi"
 }
